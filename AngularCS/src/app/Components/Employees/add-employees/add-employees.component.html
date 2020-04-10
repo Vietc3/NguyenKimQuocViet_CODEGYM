@@ -28,9 +28,10 @@
 
     <p id="name-Birthday"> Input Birthday</p>
 <!--Date Picker Đẹp-->
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <input class="form-control" matInput [matDatepicker]="picker" formControlName="birthDay"  >
-    <mat-datepicker #picker></mat-datepicker>
+    <div class="input-group"> <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <input class="form-control" matInput [matDatepicker]="picker" formControlName="birthDay"  >
+      <mat-datepicker #picker></mat-datepicker></div>
+
 
 
 <!--        <input type="date" class="form-control" formControlName="birthDay">-->

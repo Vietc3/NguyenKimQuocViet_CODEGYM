@@ -1,67 +1,75 @@
 <h2 style="margin-left: 40%">Add New Customer</h2>
 <form class="w-50 mx-auto" [formGroup]="formAddNewCustomer">
   <div class="form-group">
-    <p id="name-input" > Input Fullname</p>
+    <p id="name-input"> Input Fullname</p>
     <input type="text" class="form-control" formControlName="fullNameCustomer">
-    <p class="alert alert-danger text-danger" *ngIf="formAddNewCustomer.controls.fullNameCustomer.errors?.required && formAddNewCustomer.controls.fullNameCustomer.touched ">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewCustomer.controls.fullNameCustomer.errors?.required && formAddNewCustomer.controls.fullNameCustomer.touched ">
       Input Fullname, Please!</p>
 
-    <p id="name-Position" class="form-custom" > Input TypeCustomer</p>
+    <p id="name-Position" class="form-custom"> Input TypeCustomer</p>
     <input type="text" class="form-control" formControlName="typeCustomer">
-    <p class="alert alert-danger text-danger" *ngIf="formAddNewCustomer.controls.typeCustomer.errors?.required && formAddNewCustomer.controls.typeCustomer.touched " >
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewCustomer.controls.typeCustomer.errors?.required && formAddNewCustomer.controls.typeCustomer.touched ">
       Input Position, Please!</p>
 
 
-    <p id="name-Birthday" > Input Birthday</p>
+    <p id="name-Birthday"> Input Birthday</p>
+    <div class="input-group">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <input class="form-control" matInput [matDatepicker]="picker" formControlName="birthdayCustomer">
+      <mat-datepicker #picker></mat-datepicker>
+    </div>
 
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <input class="form-control" matInput [matDatepicker]="picker" formControlName="birthdayCustomer">
-    <mat-datepicker #picker></mat-datepicker>
 
-<!--    <input type="date" class="form-control" formControlName="birthdayCustomer">-->
-    <p class="alert alert-danger text-danger" *ngIf="formAddNewCustomer.controls.birthdayCustomer.errors?.required && formAddNewCustomer.controls.birthdayCustomer.touched ">
+    <!--    <input type="date" class="form-control" formControlName="birthdayCustomer">-->
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewCustomer.controls.birthdayCustomer.errors?.required && formAddNewCustomer.controls.birthdayCustomer.touched ">
       Input Birthday, Please!</p>
 
 
-
-
-
-    <p id="name-Salar" > Input IDCard Customer</p>
+    <p id="name-Salar"> Input IDCard Customer</p>
     <input type="text" class="form-control" formControlName="idCardCustomer">
-    <p class="alert alert-danger text-danger" *ngIf="formAddNewCustomer.controls.idCardCustomer.errors?.required && formAddNewCustomer.controls.idCardCustomer.touched ">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewCustomer.controls.idCardCustomer.errors?.required && formAddNewCustomer.controls.idCardCustomer.touched ">
       Input salary, Please!</p>
-    <p class="alert alert-danger text-danger" *ngIf="formAddNewCustomer.controls.idCardCustomer.errors?.pattern && formAddNewCustomer.controls.idCardCustomer.touched ">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewCustomer.controls.idCardCustomer.errors?.pattern && formAddNewCustomer.controls.idCardCustomer.touched ">
       Invalid Salary! Input salary, Please</p>
 
 
-
-
-    <p id="name-Numberphone" > Input PhoneNumber</p>
+    <p id="name-Numberphone"> Input PhoneNumber</p>
     <input type="text" class="form-control" formControlName="phoneNumberCustomer">
-    <p class="alert alert-danger text-danger" *ngIf="formAddNewCustomer.controls.phoneNumberCustomer.errors?.required && formAddNewCustomer.controls.phoneNumberCustomer.touched ">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewCustomer.controls.phoneNumberCustomer.errors?.required && formAddNewCustomer.controls.phoneNumberCustomer.touched ">
       Input Phone, Please!</p>
-    <p class="alert alert-danger text-danger" *ngIf="formAddNewCustomer.controls.phoneNumberCustomer.errors?.pattern && formAddNewCustomer.controls.phoneNumberCustomer.touched ">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewCustomer.controls.phoneNumberCustomer.errors?.pattern && formAddNewCustomer.controls.phoneNumberCustomer.touched ">
       Invalid Phone! Input Phone, Please</p>
 
 
-
-    <p id="name-Email" > Input Email</p>
+    <p id="name-Email"> Input Email</p>
     <input type="text" class="form-control" formControlName="emailCustomer">
-    <p class="alert alert-danger text-danger" *ngIf="formAddNewCustomer.controls.emailCustomer.errors?.required && formAddNewCustomer.controls.emailCustomer.touched ">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewCustomer.controls.emailCustomer.errors?.required && formAddNewCustomer.controls.emailCustomer.touched ">
       Input Email, Please!</p>
-    <p class="alert alert-danger text-danger" *ngIf="formAddNewCustomer.controls.emailCustomer.errors?.email && formAddNewCustomer.controls.emailCustomer.touched ">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewCustomer.controls.emailCustomer.errors?.email && formAddNewCustomer.controls.emailCustomer.touched ">
       Invalid email! Input Email Again, Please</p>
 
 
-
-    <p id="name-Address" > Input Address</p>
+    <p id="name-Address"> Input Address</p>
     <input type="text" class="form-control" formControlName="addressCustomer">
-    <p class="alert alert-danger text-danger" *ngIf="formAddNewCustomer.controls.addressCustomer.errors?.required && formAddNewCustomer.controls.addressCustomer.touched ">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewCustomer.controls.addressCustomer.errors?.required && formAddNewCustomer.controls.addressCustomer.touched ">
       Input Address, Please!</p>
   </div>
 </form>
 <div class="row d-flex justify-content-center">
-  <button [disabled]="formAddNewCustomer.invalid" class="btn btn-success" type="submit" style="height: 36px" (click)="addNewCustomer()"
-  >Complete</button></div>
+  <button [disabled]="formAddNewCustomer.invalid" class="btn btn-success" type="submit" style="height: 36px"
+          (click)="addNewCustomer()"
+  >Complete
+  </button>
+</div>
 
 

@@ -34,24 +34,27 @@
 
 
     <p id="name-Birthday"> Input Start Day Contract</p>
+    <div class="input-group">
+      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+      <input class="form-control" matInput [matDatepicker]="picker1" formControlName="starDateContract">
+      <mat-datepicker #picker1></mat-datepicker>
+    </div>
 
-    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-    <input class="form-control" matInput [matDatepicker]="picker1" formControlName="starDateContract">
-    <mat-datepicker #picker1></mat-datepicker>
-
-<!--    <input type="date" class="form-control" formControlName="starDateContract">-->
+    <!--    <input type="date" class="form-control" formControlName="starDateContract">-->
     <p class="alert alert-danger text-danger"
        *ngIf="formAddNewContract.controls.starDateContract.errors?.required && formAddNewContract.controls.starDateContract.touched ">
       Input Start Day Contract, Please!</p>
 
 
     <p id="name-Birthday1"> Input End Date Contract</p>
+    <div class="input-group">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <input class="form-control" matInput [matDatepicker]="picker" formControlName="endDateContract">
+      <mat-datepicker #picker></mat-datepicker>
+    </div>
 
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <input class="form-control" matInput [matDatepicker]="picker" formControlName="endDateContract">
-    <mat-datepicker #picker></mat-datepicker>
 
-<!--    <input type="date" class="form-control" formControlName="endDateContract">-->
+    <!--    <input type="date" class="form-control" formControlName="endDateContract">-->
     <p class="alert alert-danger text-danger"
        *ngIf="formAddNewContract.controls.endDateContract.errors?.required && formAddNewContract.controls.endDateContract.touched ">
       Input End Date Contract, Please!</p>

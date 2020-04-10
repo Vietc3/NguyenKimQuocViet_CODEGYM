@@ -3,82 +3,107 @@
   <div class="form-group">
 
 
-    <input type="hidden" class="form-control" formControlName="id"  [(ngModel)]="employeeEdit.id">
+    <input type="hidden" class="form-control" formControlName="id" [(ngModel)]="employeeEdit.id">
 
-    <p id="name-input" >Input Name</p>
-    <input type="text" class="form-control" formControlName="name"  [(ngModel)]="employeeEdit.name">
-    <p class="alert alert-danger text-danger" *ngIf="formAddNewEmployee1.controls.name.errors?.required && formAddNewEmployee1.controls.name.touched ">
+    <p id="name-input">Input Name</p>
+    <input type="text" class="form-control" formControlName="name" [(ngModel)]="employeeEdit.name">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewEmployee1.controls.name.errors?.required && formAddNewEmployee1.controls.name.touched ">
       Input Fullname, Please!</p>
 
-    <p id="name-Position" class="form-custom" > Input Position</p>
-    <input type="text" class="form-control" formControlName="position" *ngIf="employeeEdit" [(ngModel)]="employeeEdit.position">
-    <p class="alert alert-danger text-danger" *ngIf="formAddNewEmployee1.controls.position.errors?.required && formAddNewEmployee1.controls.position.touched " >
+    <p id="name-Position" class="form-custom"> Input Position</p>
+    <input type="text" class="form-control" formControlName="position" *ngIf="employeeEdit"
+           [(ngModel)]="employeeEdit.position">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewEmployee1.controls.position.errors?.required && formAddNewEmployee1.controls.position.touched ">
       Input Position, Please!</p>
 
-    <p id="name-Level" > Input Level</p>
-    <input type="text" class="form-control" formControlName="lever" *ngIf="employeeEdit" [(ngModel)]="employeeEdit.lever">
-    <p class="alert alert-danger text-danger" *ngIf="formAddNewEmployee1.controls.lever.errors?.required && formAddNewEmployee1.controls.lever.touched ">
+    <p id="name-Level"> Input Level</p>
+    <input type="text" class="form-control" formControlName="lever" *ngIf="employeeEdit"
+           [(ngModel)]="employeeEdit.lever">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewEmployee1.controls.lever.errors?.required && formAddNewEmployee1.controls.lever.touched ">
       Input Level, Please!</p>
 
-    <p id="name-Partitive" > Input Partitive</p>
-    <input type="text" class="form-control" formControlName="partitive" *ngIf="employeeEdit" [(ngModel)]="employeeEdit.partitive">
-    <p class="alert alert-danger text-danger" *ngIf="formAddNewEmployee1.controls.partitive.errors?.required && formAddNewEmployee1.controls.partitive.touched ">
+    <p id="name-Partitive"> Input Partitive</p>
+    <input type="text" class="form-control" formControlName="partitive" *ngIf="employeeEdit"
+           [(ngModel)]="employeeEdit.partitive">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewEmployee1.controls.partitive.errors?.required && formAddNewEmployee1.controls.partitive.touched ">
       Input Partitive, Please!</p>
 
-    <p id="name-Birthday" > Input Birthday</p>
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <input class="form-control" matInput [matDatepicker]="picker" formControlName="birthDay"  [(ngModel)]="employeeEdit.birthDay">
-    <mat-datepicker #picker></mat-datepicker>
+    <p id="name-Birthday"> Input Birthday</p>
+    <div class="input-group">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <input class="form-control" matInput [matDatepicker]="picker" formControlName="birthDay"
+             [(ngModel)]="employeeEdit.birthDay">
+      <mat-datepicker #picker></mat-datepicker>
+    </div>
 
-<!--    <input type="date" class="form-control" formControlName="birthDay" *ngIf="employeeEdit" [(ngModel)]="employeeEdit.birthDay">-->
-    <p class="alert alert-danger text-danger" *ngIf="formAddNewEmployee1.controls.birthDay.errors?.required && formAddNewEmployee1.controls.birthDay.touched ">
+
+    <!--    <input type="date" class="form-control" formControlName="birthDay" *ngIf="employeeEdit" [(ngModel)]="employeeEdit.birthDay">-->
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewEmployee1.controls.birthDay.errors?.required && formAddNewEmployee1.controls.birthDay.touched ">
       Input Birthday, Please!</p>
 
 
-    <p id="name-IDCard" > Input IDCard</p>
-    <input type="text" class="form-control" formControlName="idCard" *ngIf="employeeEdit" [(ngModel)]="employeeEdit.idCard">
-    <p class="alert alert-danger text-danger" *ngIf="formAddNewEmployee1.controls.idCard.errors?.required && formAddNewEmployee1.controls.idCard.touched ">
+    <p id="name-IDCard"> Input IDCard</p>
+    <input type="text" class="form-control" formControlName="idCard" *ngIf="employeeEdit"
+           [(ngModel)]="employeeEdit.idCard">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewEmployee1.controls.idCard.errors?.required && formAddNewEmployee1.controls.idCard.touched ">
       Input IDCard, Please!</p>
-    <p class="alert alert-danger text-danger" *ngIf="formAddNewEmployee1.controls.idCard.errors?.pattern && formAddNewEmployee1.controls.idCard.touched ">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewEmployee1.controls.idCard.errors?.pattern && formAddNewEmployee1.controls.idCard.touched ">
       Invalid idCard! Input IDCard, Please!</p>
 
 
-    <p id="name-Salar" > Input Salary</p>
-    <input type="text" class="form-control" formControlName="salary" *ngIf="employeeEdit" [(ngModel)]="employeeEdit.salary">
-    <p class="alert alert-danger text-danger" *ngIf="formAddNewEmployee1.controls.salary.errors?.required && formAddNewEmployee1.controls.salary.touched ">
+    <p id="name-Salar"> Input Salary</p>
+    <input type="text" class="form-control" formControlName="salary" *ngIf="employeeEdit"
+           [(ngModel)]="employeeEdit.salary">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewEmployee1.controls.salary.errors?.required && formAddNewEmployee1.controls.salary.touched ">
       Input salary, Please!</p>
-    <p class="alert alert-danger text-danger" *ngIf="formAddNewEmployee1.controls.salary.errors?.pattern && formAddNewEmployee1.controls.salary.touched ">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewEmployee1.controls.salary.errors?.pattern && formAddNewEmployee1.controls.salary.touched ">
       Invalid Salary! Input salary, Please!</p>
 
 
-
-
-    <p id="name-Numberphone" > Input PhoneNumber</p>
-    <input type="text" class="form-control" formControlName="phone" *ngIf="employeeEdit" [(ngModel)]="employeeEdit['phone']">
-    <p class="alert alert-danger text-danger" *ngIf="formAddNewEmployee1.controls.phone.errors?.required && formAddNewEmployee1.controls.phone.touched ">
+    <p id="name-Numberphone"> Input PhoneNumber</p>
+    <input type="text" class="form-control" formControlName="phone" *ngIf="employeeEdit"
+           [(ngModel)]="employeeEdit['phone']">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewEmployee1.controls.phone.errors?.required && formAddNewEmployee1.controls.phone.touched ">
       Input Phone, Please!</p>
-    <p class="alert alert-danger text-danger" *ngIf="formAddNewEmployee1.controls.phone.errors?.pattern && formAddNewEmployee1.controls.phone.touched ">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewEmployee1.controls.phone.errors?.pattern && formAddNewEmployee1.controls.phone.touched ">
       Invalid Phone! Input Phone, Please!</p>
 
 
-
-    <p id="name-Email" > Input Email</p>
-    <input type="text" class="form-control" formControlName="email" *ngIf="employeeEdit" [(ngModel)]="employeeEdit.email">
-    <p class="text-danger" *ngIf="formAddNewEmployee1.controls.email.errors?.required && formAddNewEmployee1.controls.email.touched ">
+    <p id="name-Email"> Input Email</p>
+    <input type="text" class="form-control" formControlName="email" *ngIf="employeeEdit"
+           [(ngModel)]="employeeEdit.email">
+    <p class="text-danger"
+       *ngIf="formAddNewEmployee1.controls.email.errors?.required && formAddNewEmployee1.controls.email.touched ">
       Input Email, Please!</p>
-    <p class="text-danger" *ngIf="formAddNewEmployee1.controls.email.errors?.email && formAddNewEmployee1.controls.email.touched ">
+    <p class="text-danger"
+       *ngIf="formAddNewEmployee1.controls.email.errors?.email && formAddNewEmployee1.controls.email.touched ">
       Invalid email! Input Email Again, Please!</p>
 
 
-
-    <p id="name-Address" > Input Address</p>
-    <input type="text" class="form-control" formControlName="address" *ngIf="employeeEdit" [(ngModel)]="employeeEdit.address">
-    <p class="text-danger" *ngIf="formAddNewEmployee1.controls.address.errors?.required && formAddNewEmployee1.controls.address.touched ">
+    <p id="name-Address"> Input Address</p>
+    <input type="text" class="form-control" formControlName="address" *ngIf="employeeEdit"
+           [(ngModel)]="employeeEdit.address">
+    <p class="text-danger"
+       *ngIf="formAddNewEmployee1.controls.address.errors?.required && formAddNewEmployee1.controls.address.touched ">
       Input Address, Please!</p>
   </div>
 </form>
 <div class="row d-flex justify-content-center">
-  <button [disabled]="formAddNewEmployee1.invalid" class="btn btn-success" type="submit" style="height: 36px" (click)="onEdit()"
-  >Complete</button></div>
+  <button [disabled]="formAddNewEmployee1.invalid" class="btn btn-success" type="submit" style="height: 36px"
+          (click)="onEdit()"
+  >Complete
+  </button>
+</div>
 
 
