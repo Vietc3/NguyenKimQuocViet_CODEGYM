@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="yes" onclick="yes()" style="position:absolute; left:300px; top:235px;">YES</button>
+<button id="no" onmouseover="buttonNo()" style="position:absolute; left:360px; top:235px;" >NO</button>
+<div style="position:absolute; left:250px; top:200px;">DO YOU LOVE ME</div>
+<script>
+    let no = document.getElementById("no");
+
+       function yes() {
+        alert('Yes, you are right')
+    }
+    function buttonNo() {
+        var x = Math.round(Math.random() * window.innerWidth);
+        var y = Math.round(Math.random() * window.innerHeight);
+        no.style.left =  x +'px';
+        no.style.top =  y+'px';
+    }
+
+</script>
+
+</body>
+</html>

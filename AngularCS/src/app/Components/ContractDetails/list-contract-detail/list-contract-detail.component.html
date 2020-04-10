@@ -1,0 +1,42 @@
+
+<div class="row">
+
+  <h2 id="danhSach1" style="margin-left: 30px">Contract Details List</h2>
+  <div class="d-flex" id="search">
+    <input class="form-control " type="text" placeholder="Search Contract Detail " [(ngModel)]="searchTermContractDetails" style="width:400px">
+    <button class="btn btn-success" type="submit" style="height: 36px" id="btnSearch" >Search</button>
+  </div>
+  <div class="row">
+    <button id="addNewEmployee" class="btn btn-success" [routerLink]="['/contractDetail-list/add']">Add New Contract</button>
+    <table id="tableEmployee" class="table table-bordered table-hover">
+      <thead>
+      <tr style="text-align: center">
+        <th>ID</th>
+        <th>ID Contract</th>
+        <th>ID ServicePlus</th>
+        <th>Amount</th>
+        <th width="180">Action</th>
+      </tr>
+      </thead>
+      <tbody style="text-align: center" >
+      <tr *ngFor="let contractDetail of contractDetails |filter:searchTermContractDetails |paginate: { itemsPerPage: 5, currentPage: pContractDetails }">
+        <td>{{contractDetail.id}}</td>
+        <td>{{contractDetail.idContract}}</td>
+        <td>{{contractDetail.idServicePlus}}</td>
+        <td>{{contractDetail.amount}}</td>
+        <td>
+          <div class="d-flex align-items-stretch px-0">
+            <button class="btn btn-warning" style="width: 70px" [routerLink]="['/contractDetail-list',contractDetail.id,'edit']">Edit</button>
+            <button class="btn btn-danger ml-3" style="width:70px" (click)="onDeleteContractDetail(contractDetail.id)">Delete</button>
+          </div>
+        </td>
+
+      </tbody>
+    </table>
+    <div id="page"> <pagination-controls (pageChange)="pContractDetails = $event"></pagination-controls></div>
+
+  </div>
+
+</div>
+
+

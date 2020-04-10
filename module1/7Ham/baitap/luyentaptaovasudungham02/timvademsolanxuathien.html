@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="txtValue">
+<input type="button" id="btnAdd" value="Thêm vào mảng" onclick="add_element_to_array();"></input>
+<input type="text" id="btnNhap">
+<input type="button" id="btnDisplay" value="Xuất ra màng hình" onclick="display_array();"></input>
+<input type="button" id="btnMax" value="Tìm và xóa" onclick="timvadem();"></input>
+<div id="result"></div>
+<script>
+    let x = 0;
+    let array = Array();
+
+    function add_element_to_array() {
+        array[x] = document.getElementById("txtValue").value;
+        x++;
+        if (x > 9) {
+            x = 0;
+        }
+        document.getElementById("txtValue").value = "";
+    }
+
+    function display_array() {
+        let e = "<hr/>";
+        for (let i = 0; i < array.length; i++) {
+            e += "Số thứ " + (i + 1) + " = " + array[i] + "<br/>";
+        }
+        document.getElementById("result").innerHTML = e;
+    }
+
+    function timvadem() {
+        let numberNhap = document.getElementById('btnNhap');
+        let dem = 0;
+        let so = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] == Number(numberNhap.value)) {
+
+                dem++;
+                so = numberNhap.value;
+            }
+        }
+
+        if (dem !== 0) {
+            alert('Có ' + dem + ' số ' + so + ' trong mảng');
+
+        } else (alert(-1))
+    }
+</script>
+</body>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập tiếng anh:<input id="tienganh"/>
+<button onclick="timkiem();" id="timkiem">Dịch sang tiếng Việt</button>
+
+<script>
+    let tiengAnh =["one","two","three"];
+    let tiengViet =["Một","Hai","Ba"];
+
+    function timkiem() {
+        let dulieu=document.getElementById("tienganh");
+        for (var i=0;i<=tiengAnh.length-1;i++)
+        {
+            if(dulieu.value===tiengAnh[i]){
+                document.write(tiengViet[i])
+                break;
+            }
+            else {alert('từ bạn kiếm không có ')}
+        }
+
+    }
+
+</script>
+</body>
+</html>

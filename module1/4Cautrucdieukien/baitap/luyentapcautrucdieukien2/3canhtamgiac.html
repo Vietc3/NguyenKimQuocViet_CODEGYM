@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soA=parseInt(prompt('nhập cạnh A:'));
+    let soB=parseInt(prompt('nhập cạnh B:'));
+    let soC=parseInt(prompt('nhập cạnh C:'));
+if(soA>0 && soB>0 && soC>0 &&soA+soC>soB || soA>0 && soB>0 && soC>0 &&soB+soC>soA || soA>0 && soB>0 && soC>0 &&soA+soB>soC)
+{alert('đây là 3 cạnh tam giác')}
+else {alert('số tiền cần trả là:'+ (soA*soB))}
+</script>
+</body>
+</html>

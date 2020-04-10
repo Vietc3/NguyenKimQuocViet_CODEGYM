@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input oninput="tinhGiaiThua(this.value)"/>
+<br/>
+<div id="ketqua"></div>
+
+<script>
+    let ketQua=1;
+    function tinhGiaiThua(a) {
+        parseFloat(a);
+
+        for(var i=0;i<a;i++){
+            ketQua=ketQua*(a-i);
+        }
+document.getElementById('ketqua').innerText= a+"!"+"="+ketQua;
+    }
+</script>
+
+</body>
+</html>

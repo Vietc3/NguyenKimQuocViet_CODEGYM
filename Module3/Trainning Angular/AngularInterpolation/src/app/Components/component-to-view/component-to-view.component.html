@@ -1,0 +1,27 @@
+<h1>Interpolation</h1>
+<p>{{user.name}}</p>
+<p>{{age}}</p>
+<p>{{isMarried ? 'Đã Kết Hôn' : 'Chưa kết hôn'}}</p>
+<p>{{user.age}}</p>
+<p>{{showInfor()}}</p>
+<img src="{{imgLink}}" width="200">
+<h1>Property Binding</h1>
+<img [src]="imgLink" width="200">
+<button type="button" class="btn btn-primary" [disabled]="isDisableButton">dsafdsa</button>
+<table [class.table-bordered]="isDisableTable">
+    <tr>
+      <td>Họ tên</td>
+      <td>ID</td>
+      <td>Ngày sinh</td>
+    </tr>
+  <tr>
+  <td>a</td>
+  <td>b</td>
+  <td>c</td>
+</tr>
+</table>
+<span class="label"
+      [class.label-danger]="isCheck ===1"
+      [class.label-success]="isCheck !==1"
+>Lable</span>
+

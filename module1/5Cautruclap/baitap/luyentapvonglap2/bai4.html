@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let vien="";
+    let m=parseInt(prompt('nhập chiều dài'));
+    let n=parseInt(prompt('nhập chiều rộng'));
+    for(i = 1; i <= n; i++)    {
+        for( k = 1 ; k <= m; k++){
+            if(i == 1 || k == 1 || i == n || k == m){
+                vien+="*";
+            }
+            else
+            {
+               vien=vien+"&nbsp&nbsp";
+            }
+        }
+       document.write('<br/>'+vien);
+        vien='';
+    }
+</script>
+</body>
+</html>

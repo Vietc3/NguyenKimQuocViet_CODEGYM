@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="tongso" onclick="tongso()" ;>Tổng 30 số chia hết cho 7</button>
+<script>
+            function kiemtrachiahetcho7(X) {
+                if(X%7===0){
+                    return(X);
+                }
+                if(X%7!==0){
+                    return 0;
+                }
+            }
+            function tongso() {
+                let soLuong=30;
+                let biendem=0;
+                let number=0;
+                let ketqua="";
+                while(biendem<soLuong)
+                {
+                   if(kiemtrachiahetcho7(number)===number){
+                    ketqua=ketqua+"+"+kiemtrachiahetcho7(number);
+                   biendem++;}
+                    number++;
+
+                }
+                document.write(eval(ketqua))
+
+            }
+</script>
+
+</body>
+</html>

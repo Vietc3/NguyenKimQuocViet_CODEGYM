@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input  id="soLieu" oninput="footToMeter(this.value)" onchange="footToMeter(this.value)" placeholder="Nhập feet"/>
+<input id="soLieu2" oninput="meterToFeet(this.value)" onchange="meterToFeet(this.value)" placeholder="Nhập meter"/>
+<p>Đổi từ feet sang meter: <span id="output"></span></p>
+<p>Đổi từ meter sang feed: <span id="output1"></span></p>
+<script>
+    function footToMeter(x) {
+        x=parseFloat(x);
+        document.getElementById('output').innerHTML=x*3.279;
+    }
+    function meterToFeet(x) {
+        x=parseFloat(x);
+        document.getElementById('output1').innerHTML=x*0.305;
+    }
+</script>
+
+</body>
+</html>

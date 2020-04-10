@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let ocLeoLen = prompt('nhập số A:');
+    let ocTuotXuong = prompt('nhập số B:');
+    let doCao = prompt('nhập độ cao V:');
+    let soNgayCanLeo = (Number(doCao) - Number(ocTuotXuong)) % (Number(ocLeoLen) - Number(ocTuotXuong));
+    if (Number(doCao) <= Number(ocTuotXuong)) {
+        alert("Ốc sên mât 1 ngày bò lên cây")
+    }
+    else {
+        if (soNgayCanLeo === 0) {
+            alert('Ốc sên mất '+(parseInt((Number(doCao) - Number(ocTuotXuong)) / (Number(ocLeoLen) - Number(ocTuotXuong))))+' ngày để bò lên cây')
+        } else {
+            alert('Ốc sên mất '+(parseInt((Number(doCao) - Number(ocTuotXuong)) / (Number(ocLeoLen) - Number(ocTuotXuong)))+1)+" ngày để bò lên cây")
+        }
+    }
+
+</script>
+</body>
+</html>

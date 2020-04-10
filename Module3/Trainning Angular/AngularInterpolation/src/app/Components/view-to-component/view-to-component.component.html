@@ -1,0 +1,20 @@
+<h1>Event Binding</h1>
+<button class="btn btn-primary"(click)="onClickMe()">
+  Click me
+</button>
+<h1>{{count}}</h1>
+<button class="btn btn-warning"(click)="onClickCount()">
+ Tăng
+</button>
+<hr>
+<h3>{{userName}}</h3>
+<div class="form-group">
+  <label>User Name</label>
+  <input type="text" class="form-control" (keyup)="onKeyUp($event)">
+
+<div class="form-group">
+  <label>Name:{{userName}}</label>
+  <input type="text" class="form-control" (keyup.enter)="onKeyUpEnter($event)">
+</div>
+
+

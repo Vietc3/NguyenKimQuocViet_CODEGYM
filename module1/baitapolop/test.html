@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Us Zip Code Checker</title>
+</head>
+<body>
+<fieldset>
+    <input type="text" id="zipCode" placeholder="Input a zipcode">
+    <input type="button" value="Check" onClick="checkZipcode();">
+    <p>Result Here:<span id="demo"></span></p>
+</fieldset>
+<script>
+    function checkZipcode() {
+        const zipcodeRegex = /\d{5}-\d{4}/g;
+        var zipInput = document.getElementById("zipCode").value;
+        // zipcodeRegex.test(zipcodeInput);
+        if(zipcodeRegex.test(zipInput)) {
+            document.getElementById("demo").innerHTML = zipInput + "matched";
+        } else {
+            document.getElementById("demo").innerHTML = zipInput + " not matched";
+        }
+    }
+</script>
+</body>
+</html>

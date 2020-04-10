@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="doremon1" src="doremonone.JPG" onclick="chuyensangxuka1()"/>
+<br/>
+<img id="doremon2" src="nobitatwo.JPG" onclick="chuyensangxuka2()"/>
+<br/>
+<div id="ketqua">ketqua</div>
+<script>
+    let images = ["doremonone.JPG", "xukaone.JPG", "nobitaone.JPG"    ];
+    let images2 = ["doremontwo.JPG", "xukatwo.JPG", "nobitatwo.JPG"    ];
+    let dem2 = 0;
+    let dem = 0;
+    let doremon = document.getElementById("doremon1");
+    let doremon2 = document.getElementById("doremon2");
+    let a;
+    let b;
+
+    function chuyensangxuka1() {
+        dem++;
+        if (dem >= images.length) {
+            dem = 0;
+            a=1;
+        }
+        doremon.src = images[dem];
+        if(a=1){if(dem===dem2)
+        {document.getElementById("ketqua").innerText='bạn đã xếp đúng'}}
+        if(dem!=dem2)
+        {document.getElementById("ketqua").innerText='bạn xếp chưa đúng'}
+    }
+
+    function chuyensangxuka2() {
+        dem2++;
+        if (dem2 >= images2.length) {
+            dem2 = 0;
+            b=1
+        }
+        doremon2.src = images2[dem2];
+        if(b=1){if(dem===dem2)
+        {document.getElementById("ketqua").innerText='bạn đã xếp đúng'}}
+        if(dem!=dem2)
+        {document.getElementById("ketqua").innerText='bạn xếp chưa đúng'}
+    }
+
+</script>
+</body>
+</html>

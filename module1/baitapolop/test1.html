@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="tìm mảng tăng dài" onclick="timmangchiahet();"></input>
+<div id="result"></div>
+<script>
+    let x = 0;
+    let array = Array();
+    array = [5, 3, 10, 1,1,5,9,9,3];
+    let numberCheck = 4;
+    let array1 = [];
+    let sum = 0;
+    let dem = 0;
+
+    function timmangchiahet() {
+        if(array.length===1){
+            if(array[0]%numberCheck===0){
+                alert('1')
+            }
+            else {
+                alert('ko co mang~ nao')
+            }
+        }
+        else {
+        for (let i = 0; i < array.length; i++) {
+            sum = array[i];
+            for (let j = i + 1; j < array.length; j++) {
+                sum +=array[j];
+                if (sum % numberCheck === 0) {
+                    dem = j - i + 1;
+                }
+            }
+            array1.push(dem);
+            dem = 0;
+        }
+    let max=array1[0];
+    for (let i=0;i<array1.length;i++)
+    {
+      if(max<array1[i])
+      {
+          max=array1[i];
+      }
+    }
+    alert(max);}}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="1" value="1" onclick="number(this.value)">1</button>
+<button id="2" value="2" onclick="number(this.value)">2</button>
+<button id="3" value="3" onclick="number(this.value)">3</button>
+<button id="4" value="4" onclick="number(this.value)">4</button><br/>
+<button id="5" value="5" onclick="number(this.value)">5</button>
+<button id="6" value="6" onclick="number(this.value)">6</button>
+<button id="7" value="7" onclick="number(this.value)">7</button>
+<button id="8" value="8" onclick="number(this.value)">8</button><br/>
+<button id="9" value="9" onclick="number(this.value)">9</button>
+<button id="0" value="0" onclick="number(this.value)">0</button>
+<button id="-" value="-" onclick="number(this.value)">-</button>
+<button id="*" value="*" onclick="number(this.value)">*</button>
+<button id="+" value="+" onclick="number(this.value)">+</button><br/>
+<button id="/" value="/" onclick="number(this.value)">/</button>
+<button id="ketqua" value="ketqua" onclick="ketqua()">ketqua</button>
+<button id="AC" value="ketqua" onclick="ac()">AC</button>
+<div id="result"></div>
+</body>
+<script>
+    let result=document.getElementById("result");
+    let c="";
+   function number(b){
+       c=c+b;
+               result.innerText= c;
+    }
+    function ketqua() {
+        result.innerText=eval(c)
+
+    }
+    function ac() {
+       c="";
+        result.innerText=c
+
+    }
+</script>
+</html>

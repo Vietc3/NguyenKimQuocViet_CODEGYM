@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="ngoiSao(thongtin)"> Kết quả tìm kiếm</button>
+<script>
+    let thongtin=prompt('nhập tên ngôi sao: ');
+
+    let mang1=["Polaris", "Aldebaran", "Deneb", "Vega","Altair","Dubhe","Regulus"];
+    let mang2=["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+function ngoiSao(a) {
+    for(var i=0;i<7;i++)
+    {
+        if(a===mang1[i]){
+            alert('Ngôi sao:'+ mang1[i]+'Chòm sao'+mang2[i]);
+            break;
+        }
+        else (alert('không thấy ngôi sao nào')
+        )
+    }
+
+}
+</script>
+</body>
+</html>

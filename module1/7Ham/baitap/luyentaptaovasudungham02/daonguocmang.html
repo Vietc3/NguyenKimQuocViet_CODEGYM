@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="txtValue">
+<input type="button" id="btnAdd" value="Thêm vào mảng" onclick="add_element_to_array();"></input>
+<input type="button" id="btnDisplay" value="Đảo ngược mảng" onclick="Daonguoc();"></input>
+<div id="result"></div>
+<script>
+    let x = 0;
+    let array = Array();
+    function add_element_to_array() {
+        array[x] = document.getElementById("txtValue").value;
+        x++;
+        if (x > 9) {
+            x = 0;
+        }
+        document.getElementById("txtValue ").value = "";
+    }
+    function Daonguoc() {
+        let e = array.reverse();
+        document.getElementById("result").innerHTML = e.join(",");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="dayInMonth" type="number"/>
+<button id="result" onclick="ketqua()">Tính Số Ngày</button>
+<div id="hienthi">....</div>
+<script>
+    let month=document.getElementById("dayInMonth");
+    let hienThi=document.getElementById("hienthi");
+    function ketqua() {
+        if(month.value==="2")
+        {hienThi.innerText="Tháng 2 có 28 hoặc 29 ngày"}
+        if(month.value==="4")
+        {hienThi.innerText="Tháng 4 có 30 ngày"}
+        if(month.value==="6")
+        {hienThi.innerText="Tháng 6 có 30 ngày"}
+        if(month.value==="9")
+        {hienThi.innerText="Tháng 9 có 30 ngày"}
+        if(month.value==="11")
+        {hienThi.innerText="Tháng 11 có 30 ngày"}
+        else {hienThi.innerText="Tháng "+month.value+" có 30 ngày"}
+
+
+
+    }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8/>
+    <title></title>
+</head>
+<body>
+<input type="text" id="txtValue"></input>
+<input type="button" id="btnAdd" value="Thêm các chuỗi vào" onclick="add_element_to_array();">
+<input type="button" id="btnUp" value="Đổi chữ" onclick="chuhoa();">
+<script>
+
+    var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    var result = '';
+    let x = 0;
+    let array = Array();
+
+    function add_element_to_array() {
+        array[x] = document.getElementById("txtValue").value;
+        alert("Giá trị " + array[x] + " được thêm vào vị trí " + x);
+        x++;
+        document.getElementById("txtValue ").value ="";
+    }
+
+    function chuhoa() {
+        for (var i = 0; i < array.length; i++) {
+            for (var j = 0; j <= (array[i].length) - 1; j++) {
+                if (UPPER.indexOf(array[i].charAt(j)) !== -1) {
+                    result=result+(array[i].charAt(j)).toLowerCase();
+                } else if (LOWER.indexOf(array[i].charAt(j)) !== -1) {
+                    result=result+(array[i].charAt(j)).toUpperCase();
+                } else {
+                    result=result+(array[i].charAt(j))
+                }
+            }
+            document.write(result);
+    }}
+
+
+</script>
+</body>
+</html>

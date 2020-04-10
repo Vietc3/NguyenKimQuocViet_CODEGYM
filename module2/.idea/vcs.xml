@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/JavaMVCWeb" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Product-Manager" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/SpringBoot-Registration-Login-ThePerfectExample" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/SpringBoot-with-Pagination" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/java-web-mvc1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mycontact-mpa" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/responsive-grid-example" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/spring-boot-form-validation-example" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/spring-boot-form-validation-example3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/spring-boot-learning" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/spring-thymeleaf-pagination" vcs="Git" />
+  </component>
+</project>

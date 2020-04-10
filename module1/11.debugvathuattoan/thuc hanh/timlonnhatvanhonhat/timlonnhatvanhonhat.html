@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="txtValue">
+<input type="button" id="btnAdd" value="Thêm vào mảng" onclick="add_element_to_array();"></input>
+<input type="button" id="btnDisplay" value="Xuất ra màng hình" onclick="display_array();"></input>
+<input type="button" id="btnMax" value="Max" onclick="tim_so_lon_hon10();"></input>
+<div id="result"></div>
+<script>
+    let x = 0;
+    let array = Array();
+
+    function add_element_to_array() {
+        array[x] = document.getElementById("txtValue").value;
+        x++;
+        if (x > 9) {
+            x = 0;
+        }
+        document.getElementById("txtValue ").value = "";
+    }
+
+    function display_array() {
+        let e = "<hr/>";
+        for (let i = 0; i < array.length; i++) {
+            e += "Số thứ " + (i ) + " = " + array[i] + "<br/>";
+        }
+        document.getElementById("result").innerHTML = e;
+    }
+
+    function tim_so_lon_hon10() {
+        let result1 = "";
+        let max = array[0];
+        let vitri=0;
+        for (let i = 0; i < array.length; i++) {
+            if (max < array[i]) {
+                max = Numberarray[i];
+                result1 = max;
+                vitri=i;
+            }
+        }
+        document.getElementById("result").innerHTML = 'Số lớn nhất là:' + result1+
+            'nằm ở vị trí: '+vitri;
+    }
+</script>
+</body>
+</html>

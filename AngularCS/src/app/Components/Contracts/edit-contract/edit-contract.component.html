@@ -1,0 +1,85 @@
+<h2 style="margin-left: 40%">Edit Contract</h2>
+<form class="w-50 mx-auto" [formGroup]="formAddNewContract1">
+  <div class="form-group">
+    <p id="name-input" > Input ID Employee</p>
+    <input type="text" class="form-control" formControlName="idEmployee" [(ngModel)]="contractEdit.idEmployee">
+    <p class="alert alert-danger text-danger" *ngIf="formAddNewContract1.controls.idEmployee.errors?.required && formAddNewContract1.controls.idEmployee.touched ">
+      Input ID Employee!, Please!</p>
+    <p class="alert alert-danger text-danger" *ngIf="formAddNewContract1.controls.idEmployee.errors?.pattern && formAddNewContract1.controls.idEmployee.touched ">
+      Invalid  ID Employee! Input  ID Employee, Please</p>
+
+
+    <p id="name-Position" class="form-custom" > Input ID Customer</p>
+    <input type="text" class="form-control" formControlName="idCustomer" [(ngModel)]="contractEdit.idCustomer">
+    <p class="alert alert-danger text-danger" *ngIf="formAddNewContract1.controls.idCustomer.errors?.required && formAddNewContract1.controls.idCustomer.touched " >
+      Input ID idCustomer, Please!</p>
+    <p class="alert alert-danger text-danger" *ngIf="formAddNewContract1.controls.idCustomer.errors?.pattern && formAddNewContract1.controls.idCustomer.touched ">
+      Invalid  ID Customer! Input  ID Customer, Please</p>
+
+
+
+
+    <p id="name-Salar" > Input ID Service</p>
+    <input type="text" class="form-control" formControlName="idService" [(ngModel)]="contractEdit.idService">
+    <p class="alert alert-danger text-danger" *ngIf="formAddNewContract1.controls.idService.errors?.required && formAddNewContract1.controls.idService.touched ">
+      Input  ID Service, Please!</p>
+    <p class="alert alert-danger text-danger" *ngIf="formAddNewContract1.controls.idService.errors?.pattern && formAddNewContract1.controls.idService.touched ">
+      Invalid  ID Service! Input  ID Service, Please</p>
+
+
+
+
+    <p id="name-Birthday" > Input Start Day Contract</p>
+
+    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+    <input class="form-control" matInput [matDatepicker]="picker1" formControlName="starDateContract" [(ngModel)]="contractEdit.starDateContract">
+    <mat-datepicker #picker1></mat-datepicker>
+
+<!--    <input type="date" class="form-control" formControlName="starDateContract" [(ngModel)]="contractEdit.starDateContract">-->
+    <p class="alert alert-danger text-danger" *ngIf="formAddNewContract1.controls.starDateContract.errors?.required && formAddNewContract1.controls.starDateContract.touched ">
+      Input Start Day Contract, Please!</p>
+
+
+
+    <p id="name-Birthday1" > Input End Date Contract</p>
+
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <input class="form-control" matInput [matDatepicker]="picker" formControlName="endDateContract" [(ngModel)]="contractEdit.endDateContract">
+    <mat-datepicker #picker></mat-datepicker>
+
+<!--    <input type="date" class="form-control" formControlName="endDateContract" [(ngModel)]="contractEdit.endDateContract">-->
+    <p class="alert alert-danger text-danger" *ngIf="formAddNewContract1.controls.endDateContract.errors?.required && formAddNewContract1.controls.endDateContract.touched ">
+      Input End Date Contract, Please!</p>
+
+
+
+
+
+
+    <p id="name-Numberphone" > Input Deposit Money</p>
+    <input type="text" class="form-control" formControlName="depositMoney" [(ngModel)]="contractEdit.depositMoney">
+    <p class="alert alert-danger text-danger" *ngIf="formAddNewContract1.controls.depositMoney.errors?.required && formAddNewContract1.controls.depositMoney.touched ">
+      Input Deposit Money, Please!</p>
+    <p class="alert alert-danger text-danger" *ngIf="formAddNewContract1.controls.depositMoney.errors?.pattern && formAddNewContract1.controls.depositMoney.touched ">
+      Invalid Deposit Money! Input Deposit Money, Please</p>
+
+
+
+    <p id="name-Email" > Input Total Money</p>
+    <input type="text" class="form-control" formControlName="totalMoney" [(ngModel)]="contractEdit.totalMoney">
+    <p class="alert alert-danger text-danger" *ngIf="formAddNewContract1.controls.totalMoney.errors?.required && formAddNewContract1.controls.totalMoney.touched ">
+      Input Total Money, Please!</p>
+    <p class="alert alert-danger text-danger" *ngIf="formAddNewContract1.controls.totalMoney.errors?.pattern && formAddNewContract1.controls.totalMoney.touched ">
+      Invalid total money ! Input total money Again, Please</p>
+
+
+
+  </div>
+</form>
+<div class="row d-flex justify-content-center">
+  <button [disabled]="formAddNewContract1.invalid" class="btn btn-success" type="submit" style="height: 36px" (click)="onEditContract()"
+  >Complete</button></div>
+
+
+
+

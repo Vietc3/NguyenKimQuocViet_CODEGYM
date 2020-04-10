@@ -1,0 +1,67 @@
+<h2 style="margin-left: 40%">Edit Customer</h2>
+<form class="w-50 mx-auto" [formGroup]="formAddNewCustomer1">
+  <div class="form-group">
+    <p id="name-input" > Input Fullname</p>
+    <input type="text" class="form-control" formControlName="fullNameCustomer" [(ngModel)]="customerEdit.fullNameCustomer">
+    <p class="alert alert-danger text-danger" *ngIf="formAddNewCustomer1.controls.fullNameCustomer.errors?.required && formAddNewCustomer1.controls.fullNameCustomer.touched ">
+      Input Fullname, Please!</p>
+
+    <p id="name-Position" class="form-custom" > Input TypeCustomer</p>
+    <input type="text" class="form-control" formControlName="typeCustomer" [(ngModel)]="customerEdit.typeCustomer">
+    <p class="alert alert-danger text-danger" *ngIf="formAddNewCustomer1.controls.typeCustomer.errors?.required && formAddNewCustomer1.controls.typeCustomer.touched " >
+      Input Position, Please!</p>
+
+
+    <p id="name-Birthday" > Input Birthday</p>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <input class="form-control" matInput [matDatepicker]="picker" formControlName="birthdayCustomer" [(ngModel)]="customerEdit.birthdayCustomer">
+    <mat-datepicker #picker></mat-datepicker>
+
+<!--    <input type="date" class="form-control" formControlName="birthdayCustomer" [(ngModel)]="customerEdit.birthdayCustomer">-->
+    <p class="alert alert-danger text-danger" *ngIf="formAddNewCustomer1.controls.birthdayCustomer.errors?.required && formAddNewCustomer1.controls.birthdayCustomer.touched ">
+      Input Birthday, Please!</p>
+
+
+
+
+
+    <p id="name-Salar" > Input IDCard Customer</p>
+    <input type="text" class="form-control" formControlName="idCardCustomer" [(ngModel)]="customerEdit.idCardCustomer">
+    <p class="alert alert-danger text-danger" *ngIf="formAddNewCustomer1.controls.idCardCustomer.errors?.required && formAddNewCustomer1.controls.idCardCustomer.touched ">
+      Input salary, Please!</p>
+    <p class="alert alert-danger text-danger" *ngIf="formAddNewCustomer1.controls.idCardCustomer.errors?.pattern && formAddNewCustomer1.controls.idCardCustomer.touched ">
+      Invalid Salary! Input salary, Please</p>
+
+
+
+
+    <p id="name-Numberphone" > Input PhoneNumber</p>
+    <input type="text" class="form-control" formControlName="phoneNumberCustomer" [(ngModel)]="customerEdit.phoneNumberCustomer">
+    <p class="alert alert-danger text-danger" *ngIf="formAddNewCustomer1.controls.phoneNumberCustomer.errors?.required && formAddNewCustomer1.controls.phoneNumberCustomer.touched ">
+      Input Phone, Please!</p>
+    <p class="alert alert-danger text-danger" *ngIf="formAddNewCustomer1.controls.phoneNumberCustomer.errors?.pattern && formAddNewCustomer1.controls.phoneNumberCustomer.touched ">
+      Invalid Phone! Input Phone, Please</p>
+
+
+
+    <p id="name-Email" > Input Email</p>
+    <input type="text" class="form-control" formControlName="emailCustomer" [(ngModel)]="customerEdit.emailCustomer">
+    <p class="alert alert-danger text-danger" *ngIf="formAddNewCustomer1.controls.emailCustomer.errors?.required && formAddNewCustomer1.controls.emailCustomer.touched ">
+      Input Email, Please!</p>
+    <p class="alert alert-danger text-danger" *ngIf="formAddNewCustomer1.controls.emailCustomer.errors?.email && formAddNewCustomer1.controls.emailCustomer.touched ">
+      Invalid email! Input Email Again, Please</p>
+
+
+
+    <p id="name-Address" > Input Address</p>
+    <input type="text" class="form-control" formControlName="addressCustomer" [(ngModel)]="customerEdit.addressCustomer">
+    <p class="alert alert-danger text-danger" *ngIf="formAddNewCustomer1.controls.addressCustomer.errors?.required && formAddNewCustomer1.controls.addressCustomer.touched ">
+      Input Address, Please!</p>
+  </div>
+</form>
+<div class="row d-flex justify-content-center">
+  <button [disabled]="formAddNewCustomer1.invalid" class="btn btn-success" type="submit" style="height: 36px" (click)="onEditCustomer()"
+  >Complete</button></div>
+
+
+

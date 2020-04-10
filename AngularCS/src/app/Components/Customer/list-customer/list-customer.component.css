@@ -1,0 +1,22 @@
+#search{
+  margin-left: 35%;
+
+}
+#btnSearch{
+  margin-left: 5px;
+}
+#addNewEmployee{
+  height: 50px;
+  width: 150px;
+  margin-left: 40px;
+  margin-top: 25px;
+}
+
+#tableEmployee{
+  margin-left: 40px;
+  margin-top: 10px;
+}
+#page{
+  margin-left:400px;
+  margin-top: 50px;
+}

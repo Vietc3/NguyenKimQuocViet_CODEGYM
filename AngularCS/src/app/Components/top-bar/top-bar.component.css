@@ -1,0 +1,16 @@
+
+#logo{
+  border-radius: 10px;
+}
+.navbar {
+  background-color: rgb(253, 245, 230) !important;
+}
+.navbar li a {
+  color: black !important;
+  font-size: 15px;
+  font-style: initial;
+  margin-right: 20px;
+}
+#nav-bar{
+  margin-bottom: 5px;
+}

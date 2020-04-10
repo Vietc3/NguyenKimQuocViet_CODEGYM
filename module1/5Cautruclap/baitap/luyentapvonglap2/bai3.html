@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tgv1 = "";
+    let tgv2 = "";
+    let tgv3 = "";
+    let tgv4 = "";
+    let tgv5 = "";
+    let tgv6 = "";
+    for (i = 0; i < 5; i++) {
+        tgv1 = tgv1 + '*';
+        document.write('<br/>' + tgv1);
+    }
+    document.write('<br/>');
+    for (j = 0; j < 5; j++) {
+        tgv2 = '*';
+        for (k = 0; k < 4 - j; k++) {
+            tgv3 = tgv3 + "*";
+        }
+        document.write('<br/>' + tgv2 + tgv3);
+        tgv3 = ''
+    }
+    document.write('<br/>');
+    for (j = 0; j < 5; j++) {
+        tgv2 = '&nbsp&nbsp';
+        for (k = 0; k < 4 - j; k++) {
+            tgv3 = tgv3 + "&nbsp&nbsp";
+        }
+        for (l = 0; l <= j; l++) {
+            tgv4 = tgv4 + "*";
+        }
+        document.write('<br/>' + tgv2 + tgv3 + tgv4);
+        tgv3 = '';
+        tgv4 = '';
+    }
+    document.write('<br/>');
+    for (h = 0; h < 5; h++) {
+        for (n = 0; n <=h ; n++) {
+            tgv6 = tgv6 + "&nbsp&nbsp";
+        }
+        for (m = 0; m < 5-h; m++) {
+            tgv6 = tgv6 + "*";
+        }
+        document.write('<br/>' + tgv5 + tgv6);
+        tgv5 = '';
+        tgv6 = '';
+    }
+
+
+</script>
+</body>
+</html>

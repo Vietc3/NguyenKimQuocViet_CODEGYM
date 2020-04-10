@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="doicho(soA,soB)">Đổi chỗ</button>
+<script>
+    let soA=prompt('nhập sô A:');
+    let soB=prompt('nhập sô B:');
+
+    let Tam=0;
+    function doicho(a, b) {
+
+        parseFloat(a);
+        parseFloat(b);
+       Tam=b;
+       b=a;
+       a=Tam;
+
+        alert('số thứ 1 là:'+a+'\n'+'số thứ 2 là:'+b)
+
+    }
+</script>
+</body>

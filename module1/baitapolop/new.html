@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var temp = prompt('nhập chuỗi: ');
+    let count3 = "";
+    do {
+        let count = temp.charAt(0);
+        let count2 = 0;
+        for (let i = 0; i < temp.length; i++) {
+            if (count === temp.charAt(i)) {
+                count2++;
+            }
+        }
+        alert(count + ' xuat hien: ' + count2);
+        count3 = temp.split(count);
+        temp = "";
+        for (let j = 0; j < count3.length; j++) {
+            temp+=count3[j];
+        }
+    } while (temp.length !== 0);
+</script>
+</body>
+</html>

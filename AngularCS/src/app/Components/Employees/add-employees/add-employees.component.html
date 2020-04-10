@@ -1,0 +1,95 @@
+<h2 style="margin-left: 40%">Add New Employee</h2>
+<form class="w-50 mx-auto" [formGroup]="formAddNewEmployee">
+  <div class="form-group">
+    <p id="name-input"> Input Fullname</p>
+    <input type="text" class="form-control" formControlName="name">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewEmployee.controls.name.errors?.required && formAddNewEmployee.controls.name.touched ">
+      Input Fullname, Please!</p>
+
+    <p id="name-Position" class="form-custom"> Input Position</p>
+    <input type="text" class="form-control" formControlName="position">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewEmployee.controls.position.errors?.required && formAddNewEmployee.controls.position.touched ">
+      Input Position, Please!</p>
+
+    <p id="name-Level"> Input Level</p>
+    <input type="text"  class="form-control" formControlName="lever">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewEmployee.controls.lever.errors?.required && formAddNewEmployee.controls.lever.touched ">
+      Input Level, Please!</p>
+
+    <p id="name-Partitive"> Input Partitive</p>
+
+    <input type="text"  class="form-control"  formControlName="partitive">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewEmployee.controls.partitive.errors?.required && formAddNewEmployee.controls.partitive.touched ">
+      Input Partitive, Please!</p>
+
+    <p id="name-Birthday"> Input Birthday</p>
+<!--Date Picker Đẹp-->
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <input class="form-control" matInput [matDatepicker]="picker" formControlName="birthDay"  >
+    <mat-datepicker #picker></mat-datepicker>
+
+
+<!--        <input type="date" class="form-control" formControlName="birthDay">-->
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewEmployee.controls.birthDay.errors?.required && formAddNewEmployee.controls.birthDay.touched ">
+      Input Birthday, Please!</p>
+
+
+    <p id="name-IDCard"> Input IDCard</p>
+    <input type="text" class="form-control" formControlName="idCard">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewEmployee.controls.idCard.errors?.required && formAddNewEmployee.controls.idCard.touched ">
+      Input IDCard, Please!</p>
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewEmployee.controls.idCard.errors?.pattern && formAddNewEmployee.controls.idCard.touched ">
+      Invalid idCard! Input IDCard, Please!</p>
+
+
+    <p id="name-Salar"> Input Salary</p>
+    <input type="text" class="form-control" formControlName="salary">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewEmployee.controls.salary.errors?.required && formAddNewEmployee.controls.salary.touched ">
+      Input salary, Please!</p>
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewEmployee.controls.salary.errors?.pattern && formAddNewEmployee.controls.salary.touched ">
+      Invalid Salary! Input salary, Please</p>
+
+
+    <p id="name-Numberphone"> Input PhoneNumber</p>
+    <input type="text" class="form-control" formControlName="phone">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewEmployee.controls.phone.errors?.required && formAddNewEmployee.controls.phone.touched ">
+      Input Phone, Please!</p>
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewEmployee.controls.phone.errors?.pattern && formAddNewEmployee.controls.phone.touched ">
+      Invalid Phone! Input Phone, Please</p>
+
+
+    <p id="name-Email"> Input Email</p>
+    <input type="text" class="form-control" formControlName="email">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewEmployee.controls.email.errors?.required && formAddNewEmployee.controls.email.touched ">
+      Input Email, Please!</p>
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewEmployee.controls.email.errors?.email && formAddNewEmployee.controls.email.touched ">
+      Invalid email! Input Email Again, Please</p>
+
+
+    <p id="name-Address"> Input Address</p>
+    <input type="text" class="form-control" formControlName="address">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewEmployee.controls.address.errors?.required && formAddNewEmployee.controls.address.touched ">
+      Input Address, Please!</p>
+  </div>
+</form>
+<div class="row d-flex justify-content-center">
+  <button [disabled]="formAddNewEmployee.invalid" class="btn btn-success" type="submit" style="height: 36px"
+          (click)="addNewEmployee()"
+  >Complete
+  </button>
+</div>
+

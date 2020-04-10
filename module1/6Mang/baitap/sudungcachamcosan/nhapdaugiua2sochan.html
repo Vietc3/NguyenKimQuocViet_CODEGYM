@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="txtValue">
+<input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();"></input>
+<input type="button" id="btnDisplay" value="Display" onclick="display_array();"></input>
+<input type="button" id="btnSum" value="Chèn - vào số chẳn" onclick="chensochan();"></input>
+<div id="result"></div>
+<script>
+    let x = 0;
+    let array = Array();
+    function add_element_to_array() {
+        array[x] = document.getElementById("txtValue").value;
+        alert("Element: " + array[x] + " Added at index " + x);
+        x++;
+        document.getElementById("txtValue ").value = "";
+    }
+    function display_array() {
+        let e = "<hr/>";
+        for (let i = 0; i < array.length; i++) {
+            e += "Element " + i + " = " + array[i] + "<br/>";
+        }
+        document.getElementById("result").innerHTML = e;
+    }
+    function chensochan() {
+        let b = "<hr/>";
+        for (let i = 0; i < array.length; i++) {
+            if(array[i]%2===0 && array[i+1]%2===0){
+                b+=array[i]+"-";}
+            else {b+=array[i]}
+        }
+        document.getElementById("result").innerHTML = b;
+
+
+    }
+
+</script>
+
+</body>
+</html>

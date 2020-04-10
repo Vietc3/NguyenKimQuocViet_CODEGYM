@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input oninput="kiemTraKiTu(this.value)">
+<br/>
+<div id="ketqua"></div>
+<script>
+
+    let kiTuSo='1234567890';
+
+    function kiemTraKiTu(a) {
+        if(kiTuSo.indexOf(a)!==-1){
+            document.getElementById("ketqua").innerText='TRUE'
+        }
+else (document.getElementById("ketqua").innerText='False')
+        
+    }
+</script>
+</body>
+</html>

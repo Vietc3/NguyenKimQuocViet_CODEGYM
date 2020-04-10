@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let lisArray = [];
+
+    function addNewCustomname() {
+        let nameCustomer = prompt("Enter Name Customer:");
+        let idCard = prompt("Enter ID Card Customer:");
+        let birthdayCustomer = prompt("Enter Birthday Customer(dd/MM/YYYY):");
+        let emailCustomer = prompt("Enter Email Customer:");
+        let addressCustomer = prompt("Enter Address Customer:");
+        let typeCustomer = prompt("Enter Type Customer:");
+        let discount = prompt("Enter Discount:");
+        let numberOfAccompanying = prompt("Enter Number Of Accompanying:");
+        let typeRoom = prompt("Enter Type Room:");
+        let renDays = prompt("Enter Ren Days:");
+        let typeService = prompt("Enter Type Service:");
+        lisArray.push([nameCustomer, idCard, birthdayCustomer, emailCustomer, addressCustomer, typeCustomer, discount, numberOfAccompanying, typeRoom, renDays, typeService]);
+    }
+
+    function displayCustomer() {
+        let display = "";
+        for (let i = 0; i < lisArray.length; i++) {
+            display += i + 1 + ".Name: " + lisArray[i][0] + ' ID Card: ' + lisArray[i][1] + '\n';
+        }
+        let display2 = parseInt(prompt(display + (lisArray.length + 1) + ".Back to menu"));
+        for (let i = 0; i < lisArray.length; i++) {
+            if (display2 === (i + 1)) {
+                alert("Information Of Customer:\n" +
+                    "1.Name:" + lisArray[i][0] +
+                    "\n2.Id Card:" + lisArray[i][1] +
+                    "\n3.BirthDay:" + lisArray[i][2] +
+                    "\n4.Email:" + lisArray[i][3] +
+                    "\n5.Address:" + lisArray[i][4] +
+                    "\n6.Type Customer:" + lisArray[i][5] +
+                    "\n7.Discount:" + lisArray[i][6] +
+                    "\n8.Accompanying:" + lisArray[i][7] +
+                    "\n9.Type Room:" + lisArray[i][8] +
+                    "\n10.Ren Days:" + lisArray[i][9] +
+                    "\n11.Type Service:" + lisArray[i][10]);
+                break;
+            }
+
+        }
+    }
+
+    function editCustomer1() {
+        let display = "";
+        for (let i = 0; i < lisArray.length; i++) {
+            display += i + 1 + ".Name: " + lisArray[i][0] + ' ID Card: ' + lisArray[i][1] + '\n';
+        }
+        let display2 = parseInt(prompt(display + (lisArray.length + 1) + ".Back to menu"));
+while ( display2!=lisArray.length + 1) {
+            for (let i = 0; i < lisArray.length; i++) {
+                if (display2 === (i + 1)) {
+                    let edit = parseInt(prompt("1.Name:" + lisArray[i][0] +
+                        "\n2.Id Card:" + lisArray[i][1] +
+                        "\n3.BirthDay:" + lisArray[i][2] +
+                        "\n4.Email:" + lisArray[i][3] +
+                        "\n5.Address:" + lisArray[i][4] +
+                        "\n6.Type Customer:" + lisArray[i][5] +
+                        "\n7.Discount:" + lisArray[i][6] +
+                        "\n8.Accompanying:" + lisArray[i][7] +
+                        "\n9.Type Room:" + lisArray[i][8] +
+                        "\n10.Ren Days:" + lisArray[i][9] +
+                        "\n11.Type Service:" + lisArray[i][10] +
+                        "\n12.Back"));
+                   if (edit !== 12 && edit < 12) {
+                        lisArray[i][edit - 1] = prompt('Enter info you want change');
+                        break
+                    }
+                    else if(edit===12) {display2 = parseInt(prompt(display + (lisArray.length + 1) + ".Back to menu"));
+
+                }
+
+            }}
+
+        }
+    }
+
+    function deleteCustomer() {
+
+        let display = "";
+        for (let i = 0; i < lisArray.length; i++) {
+            display += i + 1 + ".Name: " + lisArray[i][0] + ' ID Card: ' + lisArray[i][1] + '\n';
+        }
+        let display2 = parseInt(prompt(display + (lisArray.length + 1) + ".Back to menu"));
+        let display4=parseInt(prompt('Are You Sure Delete'+'\n'+ 'Name'+ lisArray[display2][0]+'ID Card:'+ lisArray[display2][0]+'\n'+ '1.Yes'+'\n'+'2.No'));
+        let arrLisNam2 = [];
+        for (let i = 0; i < lisArray.length; i++) {
+
+            if (i + 1 === display2 && display4===1) {
+                alert('Delete Complete');
+                continue;
+            }
+            arrLisNam2.push(lisArray[i]);
+        }
+        lisArray = arrLisNam2;
+    }
+
+
+    function displayMainMenu() {
+        let menu = prompt('1.Add New Customer.' + '\n' +
+            '2.Display Information Customer.' + '\n' +
+            '3.Edit Information Customer.' + '\n' +
+            '4.Delete Customer.' + '\n' +
+            '5.Exit.');
+        switch (parseInt(menu)) {
+            case 1:
+                addNewCustomname();
+                break;
+            case 2:
+                displayCustomer();
+                break;
+            case 3:
+                editCustomer1();
+                break;
+            case 4:
+                deleteCustomer();
+        }
+        displayMainMenu();
+    }
+    displayMainMenu();
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+    <!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+           // $('#table1 tr:even').css('background-color','grey');
+           //  $('table tr').each(function () {
+           //      alert($(this).html());
+           //  })
+           //  alert($('ul tr:even').html())
+            $('.big').find('.small').css('border','1px solid red')
+        });
+    </script>
+
+</head>
+<body>
+<!--<table id="table1" style="width:100%">-->
+<!--    <tr>-->
+<!--        <th>Firstname</th>-->
+<!--        <th>Lastname</th>-->
+<!--        <th>Age</th>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>Jill</td>-->
+<!--        <td>Smith</td>-->
+<!--        <td>50</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>Eve</td>-->
+<!--        <td>Jackson</td>-->
+<!--        <td>94</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>John</td>-->
+<!--        <td>Doe</td>-->
+<!--        <td>80</td>-->
+<!--    </tr>-->
+<!--</table>-->
+<!--<ul>-->
+<!--    <li>selector 1</li>-->
+<!--    <li>selector 2</li>-->
+<!--    <li>selector 3</li>-->
+<!--    <li>selector 4</li>-->
+<!--</ul>-->
+<div  class="big">
+    <span class="small">This is class selector 1</span>
+</div>
+<div class="big small">
+    <span class="small">This is class selector 1</span>
+</div>
+<div class="small">
+    <p class="test">This is class selector 2</p>
+</div>
+<div class="small">
+    <div class="xsmall">This is class selector 3</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .my-boder{
+            border: 1px solid red;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+        // $('[title]').addClass('my-boder')
+        //     $('[title="div2"]').addClass('my-boder')
+            // $('span[title]').addClass('my-boder')
+            // $('.demo[title="div1"]').addClass('my-boder')
+        })
+    </script>
+</head>
+<body>
+<div class="demo" title="div1" style="background-color: yellow">
+    <span title="abc">This is first</span>
+</div>
+<div class="demo" title="div2">
+    <span>This is first</span>
+</div>
+<div class="demo" title="div2">
+    <span>This is first</span>
+</div>
+<div class="demo" title="div3">
+    <span>This is first</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nameCustomer = 'Nguyễn Kim Quốc Việt';
+    let idCard = "123456789";
+    let birthdayCustomer = "03/31/1997";
+    let emailCustomer = "vietdat657@gamil.com";
+    let addressCustomer = "Đà Nẵng";
+    let typeCustomer = "Diamond";
+    let discount = 10;
+    let numberOfAccompanying = 2;
+    let typeRoom = "Business";
+    let renDays = 10;
+    let typeService = "Villa";
+    let totalPays = 500 * Number.parseInt(renDays) * (1 - Number.parseFloat(discount)) / 100;
+    let luachon = prompt('1.Show Information Customer' + "\n2.Edit Information Customer" + "\n3.Show the amount to be paid after discount");
+    if (luachon === "1") {
+        alert("Information Of Customer:\n" +
+            "1.Name:" + nameCustomer +
+            "\n2.Id Card:" + idCard +
+            "\n3.BirthDay:" + birthdayCustomer +
+            "\n4.Email:" + emailCustomer +
+            "\n5.Address:" + addressCustomer +
+            "\n6.Type Customer:" + typeCustomer +
+            "\n7.Discount:" + discount +
+            "\n8.Accompanying:" + numberOfAccompanying +
+            "\n9.Type Room:" + typeRoom +
+            "\n10.Ren Days:" + renDays +
+            "\n11.Type Service:" + typeService +
+            "\n12.Total Pay:" + totalPays);
+    }
+    if (luachon === "2") {
+        let edit = prompt("Choose Information Customer You Want Edit\n" +
+            "1.Name:" + nameCustomer +
+            "\n2.Id Card:" + idCard +
+            "\n3.BirthDay:" + birthdayCustomer +
+            "\n4.Email:" + emailCustomer +
+            "\n5.Address:" + addressCustomer +
+            "\n6.Type Customer:" + typeCustomer +
+            "\n7.Discount:" + discount +
+            "\n8.Accompanying:" + numberOfAccompanying +
+            "\n9.Type Room:" + typeRoom +
+            "\n10.Ren Days:" + renDays +
+            "\n11.Type Service:" + typeService +
+            "\n12.Total Pay:" + totalPays);
+        if (edit === "1") {
+            nameCustomer = prompt(
+                'Enter Name You Want edit:')
+            alert("Information Of Customer:\n" +
+                "1.Name:" + nameCustomer +
+                "\n2.Id Card:" + idCard +
+                "\n3.BirthDay:" + birthdayCustomer +
+                "\n4.Email:" + emailCustomer +
+                "\n5.Address:" + addressCustomer +
+                "\n6.Type Customer:" + typeCustomer +
+                "\n7.Discount:" + discount +
+                "\n8.Accompanying:" + numberOfAccompanying +
+                "\n9.Type Room:" + typeRoom +
+                "\n10.Ren Days:" + renDays +
+                "\n11.Type Service:" + typeService +
+                "\n12.Total Pay:" + totalPays);
+        }
+        if (edit === "2") {
+            idCard = prompt(
+                'Enter Id Card You Want edit:')
+            alert("Information Of Customer:\n" +
+                "1.Name:" + nameCustomer +
+                "\n2.Id Card:" + idCard +
+                "\n3.BirthDay:" + birthdayCustomer +
+                "\n4.Email:" + emailCustomer +
+                "\n5.Address:" + addressCustomer +
+                "\n6.Type Customer:" + typeCustomer +
+                "\n7.Discount:" + discount +
+                "\n8.Accompanying:" + numberOfAccompanying +
+                "\n9.Type Room:" + typeRoom +
+                "\n10.Ren Days:" + renDays +
+                "\n11.Type Service:" + typeService +
+                "\n12.Total Pay:" + totalPays);
+        }
+        if (edit === "3") {
+            birthdayCustomer = prompt(
+                'Enter BirthDay You Want edit:');
+            alert("Information Of Customer:\n" +
+                "1.Name:" + nameCustomer +
+                "\n2.Id Card:" + idCard +
+                "\n3.BirthDay:" + birthdayCustomer +
+                "\n4.Email:" + emailCustomer +
+                "\n5.Address:" + addressCustomer +
+                "\n6.Type Customer:" + typeCustomer +
+                "\n7.Discount:" + discount +
+                "\n8.Accompanying:" + numberOfAccompanying +
+                "\n9.Type Room:" + typeRoom +
+                "\n10.Ren Days:" + renDays +
+                "\n11.Type Service:" + typeService +
+                "\n12.Total Pay:" + totalPays);
+        }
+        if (edit === "4") {
+            emailCustomer = prompt(
+                'Enter Email You Want edit:')
+            alert("Information Of Customer:\n" +
+                "1.Name:" + nameCustomer +
+                "\n2.Id Card:" + idCard +
+                "\n3.BirthDay:" + birthdayCustomer +
+                "\n4.Email:" + emailCustomer +
+                "\n5.Address:" + addressCustomer +
+                "\n6.Type Customer:" + typeCustomer +
+                "\n7.Discount:" + discount +
+                "\n8.Accompanying:" + numberOfAccompanying +
+                "\n9.Type Room:" + typeRoom +
+                "\n10.Ren Days:" + renDays +
+                "\n11.Type Service:" + typeService +
+                "\n12.Total Pay:" + totalPays);
+        }
+        if (edit === "5") {
+            addressCustomer = prompt(
+                'Enter Address You Want edit:')
+            alert("Information Of Customer:\n" +
+                "1.Name:" + nameCustomer +
+                "\n2.Id Card:" + idCard +
+                "\n3.BirthDay:" + birthdayCustomer +
+                "\n4.Email:" + emailCustomer +
+                "\n5.Address:" + addressCustomer +
+                "\n6.Type Customer:" + typeCustomer +
+                "\n7.Discount:" + discount +
+                "\n8.Accompanying:" + numberOfAccompanying +
+                "\n9.Type Room:" + typeRoom +
+                "\n10.Ren Days:" + renDays +
+                "\n11.Type Service:" + typeService +
+                "\n12.Total Pay:" + totalPays);
+        }
+        if (edit === "6") {
+            typeCustomer = prompt(
+                'Enter Type Customer You Want edit:')
+            alert("Information Of Customer:\n" +
+                "1.Name:" + nameCustomer +
+                "\n2.Id Card:" + idCard +
+                "\n3.BirthDay:" + birthdayCustomer +
+                "\n4.Email:" + emailCustomer +
+                "\n5.Address:" + addressCustomer +
+                "\n6.Type Customer:" + typeCustomer +
+                "\n7.Discount:" + discount +
+                "\n8.Accompanying:" + numberOfAccompanying +
+                "\n9.Type Room:" + typeRoom +
+                "\n10.Ren Days:" + renDays +
+                "\n11.Type Service:" + typeService +
+                "\n12.Total Pay:" + totalPays);
+        }
+        if (edit === "7") {
+            discount = prompt(
+                'Enter Discount You Want edit:')
+            alert("Information Of Customer:\n" +
+                "1.Name:" + nameCustomer +
+                "\n2.Id Card:" + idCard +
+                "\n3.BirthDay:" + birthdayCustomer +
+                "\n4.Email:" + emailCustomer +
+                "\n5.Address:" + addressCustomer +
+                "\n6.Type Customer:" + typeCustomer +
+                "\n7.Discount:" + discount +
+                "\n8.Accompanying:" + numberOfAccompanying +
+                "\n9.Type Room:" + typeRoom +
+                "\n10.Ren Days:" + renDays +
+                "\n11.Type Service:" + typeService +
+                "\n12.Total Pay:" + totalPays);
+        }
+        if (edit === "8") {
+            numberOfAccompanying = prompt(
+                'Enter Accompanying You Want edit:')
+            alert("Information Of Customer:\n" +
+                "1.Name:" + nameCustomer +
+                "\n2.Id Card:" + idCard +
+                "\n3.BirthDay:" + birthdayCustomer +
+                "\n4.Email:" + emailCustomer +
+                "\n5.Address:" + addressCustomer +
+                "\n6.Type Customer:" + typeCustomer +
+                "\n7.Discount:" + discount +
+                "\n8.Accompanying:" + numberOfAccompanying +
+                "\n9.Type Room:" + typeRoom +
+                "\n10.Ren Days:" + renDays +
+                "\n11.Type Service:" + typeService +
+                "\n12.Total Pay:" + totalPays);
+        }
+        if (edit === "9") {
+            typeRoom = prompt(
+                'Enter Type Room You Want edit:')
+            alert("Information Of Customer:\n" +
+                "1.Name:" + nameCustomer +
+                "\n2.Id Card:" + idCard +
+                "\n3.BirthDay:" + birthdayCustomer +
+                "\n4.Email:" + emailCustomer +
+                "\n5.Address:" + addressCustomer +
+                "\n6.Type Customer:" + typeCustomer +
+                "\n7.Discount:" + discount +
+                "\n8.Accompanying:" + numberOfAccompanying +
+                "\n9.Type Room:" + typeRoom +
+                "\n10.Ren Days:" + renDays +
+                "\n11.Type Service:" + typeService +
+                "\n12.Total Pay:" + totalPays);
+        }
+        if (edit === "10") {
+            renDays = prompt(
+                'Enter Ren Days You Want edit:')
+            alert("Information Of Customer:\n" +
+                "1.Name:" + nameCustomer +
+                "\n2.Id Card:" + idCard +
+                "\n3.BirthDay:" + birthdayCustomer +
+                "\n4.Email:" + emailCustomer +
+                "\n5.Address:" + addressCustomer +
+                "\n6.Type Customer:" + typeCustomer +
+                "\n7.Discount:" + discount +
+                "\n8.Accompanying:" + numberOfAccompanying +
+                "\n9.Type Room:" + typeRoom +
+                "\n10.Ren Days:" + renDays +
+                "\n11.Type Service:" + typeService +
+                "\n12.Total Pay:" + totalPays);
+        }
+        if (edit === "11") {
+            typeService = prompt(
+                'Enter Type Service You Want edit:');
+            alert("Information Of Customer:\n" +
+                "1.Name:" + nameCustomer +
+                "\n2.Id Card:" + idCard +
+                "\n3.BirthDay:" + birthdayCustomer +
+                "\n4.Email:" + emailCustomer +
+                "\n5.Address:" + addressCustomer +
+                "\n6.Type Customer:" + typeCustomer +
+                "\n7.Discount:" + discount +
+                "\n8.Accompanying:" + numberOfAccompanying +
+                "\n9.Type Room:" + typeRoom +
+                "\n10.Ren Days:" + renDays +
+                "\n11.Type Service:" + typeService +
+                "\n12.Total Pay:" + totalPays);
+        }
+    }
+    let service;
+    let discountTypeCustomer;
+    let discountAge;
+    let discountAddress;
+    let discountRendays;
+    let currentYear = new Date().getFullYear();
+    let birthday = new Date(birthdayCustomer).getFullYear();
+    let ageCustomer = currentYear - birthday;
+    if(renDays>7){discountRendays=30}
+    if(renDays<=7 && renDays>=5){discountRendays=20}
+    if(renDays<=4 && renDays>=2){discountRendays=10}
+    else{discountRendays=0}
+
+    if (addressCustomer === "Đà Nẵng") {
+        discountAddress = 20;
+    }
+    if (addressCustomer === "Huế") {
+        discountAddress = 10;
+    }
+    if (addressCustomer === "Quảng Nam") {
+        discountAddress = 5;
+    }
+    if (typeService === "Villa") {
+        service = 500;
+    }
+    if (typeService === "House") {
+       service= 300;
+    }
+    if (typeService === "Room") {
+        service = 100;
+    }
+    if (typeCustomer === "Diamond") {
+        discountTypeCustomer = 15;
+    }
+    if (typeCustomer === "Platium") {
+        discountTypeCustomer = 1;
+    }
+    if (typeCustomer === "Gold") {
+        discountTypeCustomer = 5;
+    }
+    if (typeCustomer === "Silver") {
+        discountTypeCustomer = 2;
+    }
+    if (typeCustomer === "Member") {
+        discountTypeCustomer = 0
+    }
+    if (ageCustomer >= 30 && addressCustomer === "Đà Nẵng") {
+        discountAge = 2;
+    }
+    if (ageCustomer < 30 && ageCustomer >= 25 && addressCustomer === "Đà Nẵng") {
+        discountAge = 1;
+    }
+    else{discountAge=0}
+
+
+    if (luachon === "3") {
+        var totalPayAfterDiscount = service * renDays * (1 - (discountAge + discountRendays + discountAddress + discountTypeCustomer) / 100);
+        alert('Total Pays After Discount Condition:'+ totalPayAfterDiscount);
+    }
+
+</script>
+</body>
+</html>

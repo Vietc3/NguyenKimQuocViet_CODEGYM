@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input oninput="doituongNhietdo(Number(this.value))"  placeholder="Nhập nhiệt độ K">
+<div id="result"></div>
+<script>
+    let Temperature = function (nhietdo) {
+        this.nhietdo = nhietdo;
+        this.cSangF = function () {
+            return nhietdo * 1.8 + 32;
+        }
+        this.cSangK = function () {
+            return nhietdo + 273;
+        }
+
+    }
+
+    function doituongNhietdo(x) {
+        let temperature = new Temperature(x);
+        var doiCF = temperature.cSangF();
+        var doiCK = temperature.cSangK();
+        document.getElementById('result').innerHTML = 'Đổi Sang K là:' + doiCK + '\n' + 'Đổi Sang F là:' + doiCF
+    }
+
+</script>
+
+</body>
+</html>

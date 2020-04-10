@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soA=parseInt(prompt('nhập điểm ktra:'));
+    let soB=parseInt(prompt('nhập thi giữa kì:'));
+    let soC=parseInt(prompt('nhập thi cuối kì:'));
+    let trungbinh=(soA+soB+soC)/3;
+    if (trungbinh>=5 && trungbinh<=7 ){
+        alert('loại TB')
+    }
+    if (trungbinh<5){
+        alert('loại yếu')
+    }
+    if (trungbinh>7 && trungbinh<=10){
+        alert('loại giỏi')
+    }
+</script>
+</body>
+</html>

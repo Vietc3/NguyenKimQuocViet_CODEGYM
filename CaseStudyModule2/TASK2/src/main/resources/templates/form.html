@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>MyContact App</title>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Custom style -->
+
+    <link href="../static/css/11.css"
+          th:href="@{/static/css/11.css}" rel="stylesheet"/>
+</head>
+<style>
+
+</style>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">MyContact App</a>
+</nav>
+
+<div class="container" id="main-content">
+    <div class="row d-flex justify-content-center">
+        <form style="min-width: 300px;" th:action="${ACTION}" th:object="${CUSTOMER}" method="post">
+            <h5 class="text-center">Contact form</h5>
+            <input type="hidden" th:field="*{idCustomer}" />
+            <div class="form-group">
+                <input class="form-control" th:field="*{nameCustomer}"  th:errorclass="field-error" type="text" placeholder="Contact name"/>
+                <em th:if="${#fields.hasErrors('nameCustomer')}" th:errors="*{nameCustomer}"></em>
+            </div>
+<!--            <div class="form-group">-->
+<!--                <input class="form-control" th:field="*{idTypeCustomer}" type="number"-->
+<!--                       placeholder="ID"/>-->
+<!--            </div>-->
+            <div class="form-group">
+                <input class="form-control" th:field="*{emailCustomer}" type="email" placeholder="Contact email"/>
+            </div>
+            <div class="form-group">
+            <input class="form-control" th:field="*{dayOfBirthCustomer}" type="date"
+                   placeholder="Contact birthday"/>
+        </div>
+            <div class="form-group">
+                <label>Choose Type</label>
+                <select class="form-control" th:field="*{idTypeCustomer}" id="departId" name="departId">
+                    <option   th:value="1" th:text="Diamond"></option>
+                    <option   th:value="2" th:text="Platium"></option>
+                    <option   th:value="3" th:text="Gold"></option>
+                    <option   th:value="4" th:text="Silver"></option>
+                    <option   th:value="5" th:text="Member"></option>
+<!--                    <option th:field="*{idTypeCustomer}" value="2">Platium</option>-->
+<!--                    <option th:field="*{idTypeCustomer}" value="3">Gold</option>-->
+<!--                    <option th:field="*{idTypeCustomer}" value="4">Silver</option>-->
+<!--                    <option th:field="*{idTypeCustomer}" value="5">Member</option>-->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input class="form-control" th:field="*{passportCustomer}" type="text" placeholder="Contact Passport"/>
+            </div>
+
+            <div class="form-group">
+                <input class="form-control" th:field="*{numberCustomer}"  th:errorclass="field-error" type="text" placeholder="Contact phone"/>
+                <em th:if="${#fields.hasErrors('numberCustomer')}" th:errors="*{numberCustomer}"></em>
+            </div>
+
+            <div class="form-group">
+                <input class="form-control" th:field="*{addressCustomer}" type="text" placeholder="Contact address"/>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-block btn-primary">
+                    <i class="fa fa-save"></i> Save
+                </button>
+            </div>
+        </form>
+    </div>
+</div><!-- /.container -->
+
+<footer class="container">
+    <strong>&copy; 2020 Quốc Việt</strong>
+</footer>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>

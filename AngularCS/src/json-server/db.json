@@ -1,0 +1,157 @@
+{
+  "employees": [
+    {
+      "id": 4,
+      "name": "Nguyễn Kim Quốc Việt",
+      "position": "Gián Đốc",
+      "lever": "VIp",
+      "partitive": "Kinh doanh",
+      "birthDay": "2020-03-31T17:00:00.000Z",
+      "idCard": "123456789",
+      "salary": "123456789",
+      "phone": "0901123456",
+      "email": "vietdat657@gmail.com",
+      "address": "Đà nẵng"
+    }
+  ],
+  "customer": [
+    {
+      "id": 8,
+      "fullNameCustomer": "Khánh",
+      "typeCustomer": "123456",
+      "birthdayCustomer": "1123-02-12",
+      "idCardCustomer": "123567892",
+      "phoneNumberCustomer": "0901234567",
+      "emailCustomer": "123456@gadsa",
+      "addressCustomer": "1236"
+    },
+    {
+      "id": 9,
+      "fullNameCustomer": "Nguyễn Kim Quốc Việt",
+      "typeCustomer": "Vip Pro",
+      "birthdayCustomer": "2020-04-06T17:00:00.000Z",
+      "idCardCustomer": "123456789",
+      "phoneNumberCustomer": "0901234567",
+      "emailCustomer": "vietdat657@gmail.com",
+      "addressCustomer": "Đà Nẵng"
+    }
+  ],
+  "contract": [
+    {
+      "id": 3,
+      "idEmployee": "NV-1234",
+      "idCustomer": "KH-1234",
+      "idService": "DV-1245",
+      "starDateContract": "2020-04-26T17:00:00.000Z",
+      "endDateContract": "2020-04-26T17:00:00.000Z",
+      "depositMoney": "100000",
+      "totalMoney": "2000000"
+    },
+    {
+      "id": 4,
+      "idEmployee": "NV-5564",
+      "idCustomer": "KH-7899",
+      "idService": "DV-7895",
+      "starDateContract": "2020-04-14T17:00:00.000Z",
+      "endDateContract": "2020-04-22T17:00:00.000Z",
+      "depositMoney": "100000",
+      "totalMoney": "2000000"
+    },
+    {
+      "id": 5,
+      "idEmployee": "NV-1234",
+      "idCustomer": "KH-2334",
+      "idService": "DV-1234",
+      "starDateContract": "1234-12-31",
+      "endDateContract": "1234-12-21",
+      "depositMoney": "12345",
+      "totalMoney": "123"
+    },
+    {
+      "id": 6,
+      "idEmployee": "NV-1234",
+      "idCustomer": "KH-1236",
+      "idService": "DV-1234",
+      "starDateContract": "1997-12-30",
+      "endDateContract": "1998-02-12",
+      "depositMoney": "123456",
+      "totalMoney": "123456"
+    },
+    {
+      "id": 7,
+      "idEmployee": "NV-9998",
+      "idCustomer": "KH-1234",
+      "idService": "DV-1234",
+      "starDateContract": "1234-01-21",
+      "endDateContract": "1546-12-25",
+      "depositMoney": "123456",
+      "totalMoney": "23123"
+    }
+  ],
+  "contractDetail": [
+    {
+      "id": 5,
+      "idContract": "HD-1234",
+      "idServicePlus": "DV-1235",
+      "amount": "02312555"
+    },
+    {
+      "id": 6,
+      "idContract": "HD-2234",
+      "idServicePlus": "DV-4567",
+      "amount": "1234566"
+    }
+  ],
+  "service": [
+    {
+      "id": 2,
+      "nameService": "Karaoke",
+      "area": 111,
+      "numberFloors": 111,
+      "maxPeople": "10",
+      "feeRent": "10231",
+      "idTypeRent": 123,
+      "status": "Còn"
+    },
+    {
+      "id": 4,
+      "nameService": "Bida",
+      "area": 111,
+      "numberFloors": 111,
+      "maxPeople": "10",
+      "feeRent": "10231",
+      "idTypeRent": 123,
+      "status": "Còn"
+    },
+    {
+      "id": 5,
+      "nameService": "Hồ bơi",
+      "area": 111,
+      "numberFloors": 111,
+      "maxPeople": "10",
+      "feeRent": "10231",
+      "idTypeRent": 123,
+      "status": "Còn"
+    },
+    {
+      "id": 6,
+      "nameService": "Em út",
+      "area": 111,
+      "numberFloors": 111,
+      "maxPeople": "10",
+      "feeRent": "10231",
+      "idTypeRent": 123,
+      "status": "Còn"
+    },
+    {
+      "id": 7,
+      "nameService": "Karaoke",
+      "maxPeople": "100",
+      "feeRent": "1230000",
+      "idTypeRent": "123456",
+      "status": "Hết",
+      "area": "123",
+      "numberFloors": "5"
+    }
+  ]
+}

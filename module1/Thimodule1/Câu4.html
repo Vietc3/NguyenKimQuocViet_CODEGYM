@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function HocSinh() {
+        this.setSoThuTu = function (Number) {
+            this.soThuTu = Number;
+        };
+        this.getSoThuTu = function () {
+            return this.soThuTu;
+        };
+        this.setTen = function (Name) {
+            this.Ten = Name;
+        };
+        this.getTen = function () {
+            return this.Ten;
+
+        };
+        this.setNgaySinh = function (Day) {
+            this.ngaySinh = Day;
+        };
+        this.getNgaySinh = function () {
+            return this.ngaySinh;
+
+        };
+        this.setDiemTrungBinh = function (Diem) {
+            this.diemTrungBinh = Diem;
+        };
+        this.getdiemTrungBinh = function () {
+            return this.diemTrungBinh;
+
+        };
+    }
+
+    let ten = prompt("Nhập tên");
+    let soThuTu = prompt('Nhập số thứ tự');
+    let ngaySinh = prompt('Nhập ngày sinh');
+    let diemTrungBinh =Number(prompt('Nhập điểm trung bình'));
+
+    let hocSinh = new HocSinh();
+    hocSinh.setTen(ten);
+     hocSinh.setNgaySinh(ngaySinh);
+    hocSinh.setDiemTrungBinh(diemTrungBinh);
+     hocSinh.setSoThuTu(soThuTu);
+
+    function thongTinHocSinh() {
+        let tenHocVien = hocSinh.getTen();
+        let ngaySinhHocVien = hocSinh.getNgaySinh();
+        let checkRank = hocSinh.getdiemTrungBinh();
+        let soThuTuHocVien = hocSinh.getSoThuTu();
+        alert("Thông tin học viên:" + '\n' + tenHocVien + '\n' + ngaySinhHocVien + '\n' + checkRank + '\n' + soThuTuHocVien)
+
+    }
+
+    function rank(number) {
+        if(number>8){
+            alert("Học Sinh Giỏi")
+        }
+       else if(number>=6.5){
+            alert("Học Sinh Khá")
+        }
+       else if(number>=5){
+            alert("Học Sinh Trung Bình")
+        }
+        else if(number>=3.5){
+            alert("Học Sinh Yếu")
+        }
+        else (alert("học sinh Kém"))
+
+
+    }
+   thongTinHocSinh();
+    rank(diemTrungBinh);
+
+
+</script>
+
+</body>
+</html>

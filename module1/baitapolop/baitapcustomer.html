@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+
+        table#alter tr:nth-child(even) {
+            background-color: #eee;
+        }
+
+        table#alter tr:nth-child(odd) {
+            background-color: #fff;
+        }
+
+        table#alter th {
+            color: white;
+            background-color: gray;
+        }
+    </style>
+
+</head>
+<body>
+<fieldset>
+<button id="showAndHide" onclick="show1()">Show Customer</button>
+<div id="table">
+<button id="add" onclick="addCustomer()">Add Customer</button>
+<input id="name" placeholder="Input Name">
+<input id="address" placeholder="Input Address">
+<div id="notification"></div>
+<table id="tableCustomer"></table>
+<script type="text/javascript"src="viet.js"></script>
+<script type="text/javascript" src="nam.js"></script>
+
+</div>
+
+</fieldset>
+</body>
+</html>

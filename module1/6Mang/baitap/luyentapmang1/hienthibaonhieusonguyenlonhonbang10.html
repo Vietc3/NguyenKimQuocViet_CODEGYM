@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="txtValue">
+<input type="button" id="btnAdd" value="Thêm vào mảng" onclick="add_element_to_array();"></input>
+<input type="button" id="btnDisplay" value="Xuất ra màng hình" onclick="display_array();"></input>
+<input type="button" id="btnMax" value="Xuất 10 số lớn nhất" onclick="tim_so_lon_hon10();"></input>
+<div id="result"></div>
+<script>
+    let x = 0;
+    let array = Array();
+    function add_element_to_array() {
+        array[x] = document.getElementById("txtValue").value;
+        x++;
+        if(x>9){
+            x = 0;
+        }
+        document.getElementById("txtValue").value = "";
+    }
+    function display_array() {
+        let e = "<hr/>";
+        for (let i = 0; i < array.length; i++) {
+            e += "Số thứ " + (i+1) + " = " + array[i] + "<br/>";
+        }
+        document.getElementById("result").innerHTML = e;
+    }
+    function tim_so_lon_hon10() {
+        var dem=0;
+        let result1= "";
+        for (let i = 0; i < array.length; i++) {
+            if(array[i]>=10){
+                dem++;
+            result1=result1+array[i]+"</br>";
+            }
+        }
+        document.getElementById("result").innerHTML ='Có '+dem+' số lớn hơn 10'+'các số đó là'+'</br>' + result1;
+    }
+</script>
+</body>
+</html>

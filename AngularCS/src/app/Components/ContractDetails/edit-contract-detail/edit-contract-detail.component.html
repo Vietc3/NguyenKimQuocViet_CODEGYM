@@ -1,0 +1,51 @@
+<h2 style="margin-left: 40%">Edit Contract Detail</h2>
+
+<form class="w-50 mx-auto" [formGroup]="formAddNewContractDetailEdit">
+
+  <div class="form-group">
+    <p id="name-input"> Input ID Contract</p>
+    <input type="text" class="form-control" formControlName="idContract" [(ngModel)]="contractDetailEdit.idContract">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewContractDetailEdit.controls.idContract.errors?.required && formAddNewContractDetailEdit.controls.idContract.touched ">
+      Input ID Contract, Please!</p>
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewContractDetailEdit.controls.idContract.errors?.pattern && formAddNewContractDetailEdit.controls.idContract.touched ">
+      Invalid ID Contract! Input ID Contract, Please</p>
+
+
+    <p id="name-Position" class="form-custom"> Input ID Service+</p>
+    <input type="text" class="form-control" formControlName="idServicePlus" [(ngModel)]="contractDetailEdit.idServicePlus">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewContractDetailEdit.controls.idServicePlus.errors?.required && formAddNewContractDetailEdit.controls.idServicePlus.touched ">
+      Input ID Service+, Please!</p>
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewContractDetailEdit.controls.idServicePlus.errors?.pattern && formAddNewContractDetailEdit.controls.idServicePlus.touched ">
+      Invalid ID Service+! Input ID Service+, Please</p>
+
+
+
+
+    <p id="name-Numberphone"> Input Amount</p>
+    <input type="text" class="form-control" formControlName="amount" [(ngModel)]="contractDetailEdit.amount">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewContractDetailEdit.controls.amount.errors?.required && formAddNewContractDetailEdit.controls.amount.touched ">
+      Input amount, Please!</p>
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewContractDetailEdit.controls.amount.errors?.pattern && formAddNewContractDetailEdit.controls.amount.touched ">
+      Invalid amount! Input amount, Please</p>
+
+
+
+
+  </div>
+</form>
+<div class="row d-flex justify-content-center">
+  <button [disabled]="formAddNewContractDetailEdit.invalid" class="btn btn-success" type="submit" style="height: 36px"
+          (click)="onEditContractDetail()"
+  >Complete
+  </button>
+</div>
+
+
+
+

@@ -1,0 +1,85 @@
+<h2 style="margin-left: 40%">Add New Service</h2>
+
+<form class="w-50 mx-auto" [formGroup]="formAddNewService">
+
+  <div class="form-group">
+    <p id="name-input"> Input ID Name Service</p>
+    <input type="text" class="form-control" formControlName="nameService">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewService.controls.nameService.errors?.required && formAddNewService.controls.nameService.touched ">
+      Input ID Name Service, Please!</p>
+
+
+
+    <p id="name-Position" class="form-custom"> Input Area</p>
+    <input type="text" class="form-control" formControlName="area">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewService.controls.area.errors?.required && formAddNewService.controls.area.touched ">
+      Input area, Please!</p>
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewService.controls.area.errors?.pattern && formAddNewService.controls.area.touched ">
+      Invalid area! Input area, Please</p>
+
+
+
+
+    <p id="name-Numberphone"> Input Number Floors</p>
+    <input type="text" class="form-control" formControlName="numberFloors">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewService.controls.numberFloors.errors?.required && formAddNewService.controls.numberFloors.touched ">
+      Input Number Floors, Please!</p>
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewService.controls.numberFloors.errors?.pattern && formAddNewService.controls.numberFloors.touched ">
+      Invalid Number Floors! Input Number Floors, Please</p>
+
+
+    <p id="name-Numberphone1"> Input Max People</p>
+    <input type="text" class="form-control" formControlName="maxPeople">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewService.controls.maxPeople.errors?.required && formAddNewService.controls.maxPeople.touched ">
+      Input Max People, Please!</p>
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewService.controls.maxPeople.errors?.pattern && formAddNewService.controls.maxPeople.touched ">
+      Invalid Max People! Input Max People, Please</p>
+
+
+
+    <p id="name-Numberphone2"> Input Fee Rent</p>
+    <input type="text" class="form-control" formControlName="feeRent">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewService.controls.feeRent.errors?.required && formAddNewService.controls.feeRent.touched ">
+      Input Fee Rent, Please!</p>
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewService.controls.feeRent.errors?.pattern && formAddNewService.controls.feeRent.touched ">
+      Invalid Fee Rent! Input Number Floors, Please</p>
+
+
+    <p id="name-Numberphone3"> Input ID Type Rent</p>
+    <input type="text" class="form-control" formControlName="idTypeRent">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewService.controls.idTypeRent.errors?.required && formAddNewService.controls.idTypeRent.touched ">
+      Input Fee Rent, Please!</p>
+
+
+
+    <p id="name-Numberphone4"> Input Fee Rent</p>
+    <input type="text" class="form-control" formControlName="status">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewService.controls.status.errors?.required && formAddNewService.controls.status.touched ">
+      Input Fee Rent, Please!</p>
+
+
+
+
+  </div>
+</form>
+<div class="row d-flex justify-content-center">
+  <button [disabled]="formAddNewService.invalid" class="btn btn-success" type="submit" style="height: 36px"
+          (click)="addNewService()"
+  >Complete
+  </button>
+</div>
+
+
+
+

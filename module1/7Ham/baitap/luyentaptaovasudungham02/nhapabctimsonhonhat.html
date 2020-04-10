@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="timSoNhoNhat(soA,soB,soC)">Tìm số nhỏ nhất</button>
+<script>
+    let soA=prompt('nhập sô A:');
+    let soB=prompt('nhập sô B:');
+    let soC=prompt('nhập sô C:');
+ let Min=0;
+    function timSoNhoNhat(a,b,c) {
+
+        parseFloat(a);
+        parseFloat(b);
+        parseFloat(c);
+        if(a>b && c>b){Min=b}
+        else if(a>c && b>c){Min=c}
+        else (Min=a);
+        alert(Min)
+
+    }
+</script>
+</body>
+</html>

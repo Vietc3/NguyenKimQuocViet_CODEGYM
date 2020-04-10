@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile</title>
+</head>
+<body>
+<script>
+    let Mobile = function (phone,trangthai,pin) {
+        this.tenmay = phone;
+        this.trangthai = trangthai;
+        this.pin = pin;
+        this.tinnhan = [];
+        this.checkStatus = function () {
+            if (pin === 0) {
+                this.trangthai = "Off";
+                document.write(this.tenmay + ' hết pin ' + "<br>");
+                return false;
+            }
+            else if(this.trangthai === "On") {
+                return true;
+            }
+            else if(this.trangthai === "Off"){
+                return false;
+            }
+        };
+        this.turnOn = function () {
+            if (this.checkStatus === false) {
+                this.trangthai = "On";
+                document.write(this.tenmay + ' đang ' + this.trangthai + "<br>");
+            }
+        };
+        this.turnOff = function () {
+            if (this.checkStatus === true){
+                this.trangthai = "Off";
+                document.write(this.tenmay + ' đang' + this.trangthai +"<br>");
+            }
+        };
+        this.tinnhan = "";
+        this.compose = function(msg){
+            this.pin -= 1;
+            document.write('The message is ' + msg + "<br>");
+            this.tinnhan = msg;
+        };
+        this.receive = function () {
+            this.pin -=1;
+            document.write(this.tenmay + ' received a message' + "<br>");
+        };
+        this.send = function (phone) {
+            this.pin -= 1;
+            phone.tinnhan.push(this.tinnhan);
+            phone.receive();
+        };
+        this.recharge = function (number) {
+            if(this.pin + number > 100){
+                this.pin = 100;
+                document.write(this.tenmay +"'đang có % pin là" + this.pin + "<br>");
+            }
+            else {
+                this.pin += number;
+                document.write(this.tenmay +"'đang có % pin là" + this.pin +"<br>");
+            }
+        };
+    };
+    let Nokia = new Mobile("Nokia","On",30);
+    let Iphone = new Mobile("Iphone","Off",80);
+Nokia.turnOn();
+    Nokia.checkStatus();
+    Nokia.recharge(30);
+    Nokia.compose("Việt sadsad");
+    Nokia.send(Iphone);
+
+    document.write('Iphone has a message which is '+ Iphone.tinnhan[0] );
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+
+<div class="row">
+
+  <h2 id="danhSach1" style="margin-left: 30px">Service List</h2>
+  <div class="d-flex" id="search">
+    <input class="form-control " type="text" placeholder="Search Service " [(ngModel)]="searchTermService" style="width:400px">
+    <button class="btn btn-success" type="submit" style="height: 36px" id="btnSearch" >Search</button>
+  </div>
+
+
+
+  <div class="row">
+    <button id="addNewEmployee" class="btn btn-success" [routerLink]="['/service-list/add']">Add New Service</button>
+    <table id="tableEmployee" class="table table-bordered table-hover">
+      <thead>
+      <tr style="text-align: center">
+        <th>ID</th>
+        <th>Name</th>
+        <th>Area</th>
+        <th>Number of floors</th>
+        <th>People Max</th>
+        <th>Fee Rent</th>
+        <th>ID Type Rent</th>
+        <th>Status</th>
+
+        <th width="180">Action</th>
+      </tr>
+      </thead>
+      <tbody style="text-align: center" >
+      <tr *ngFor="let services of services |filter:searchTermService |paginate: { itemsPerPage: 5, currentPage: pService }">
+        <td>{{services.id}}</td>
+        <td>{{services.nameService}}</td>
+        <td>{{services.area}}</td>
+        <td>{{services.numberFloors}}</td>
+        <td>{{services.maxPeople}}</td>
+        <td>{{services.feeRent}}</td>
+        <td>{{services.idTypeRent}}</td>
+        <td>{{services.status}}</td>
+        <td>
+          <div class="d-flex align-items-stretch px-0">
+            <button class="btn btn-warning" style="width: 70px" [routerLink]="['/service-list',services.id,'edit']">Edit</button>
+            <button class="btn btn-danger ml-3" style="width:70px" (click)="onDeleteService(services.id)">Delete</button>
+          </div>
+        </td>
+
+      </tbody>
+    </table>
+    <div id="page"> <pagination-controls (pageChange)="pService = $event"></pagination-controls></div>
+
+  </div>
+
+</div>
+
+
+

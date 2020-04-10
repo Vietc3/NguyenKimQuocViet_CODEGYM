@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="mail" oninput="checkmail(this.value)">
+<div id="result"></div>
+<script>
+    var regex= /^[A|C|P][0-9]{4}[G|H|I|K|L|M]$/g;
+    function checkmail(str)
+    {
+        if(regex.test(str)){
+            document.getElementById('result').innerText="Tên lớp đúng"
+        }
+        else {
+            document.getElementById('result').innerText="Tên lớp  sai"
+        }
+    }
+</script>
+</body>
+</html>

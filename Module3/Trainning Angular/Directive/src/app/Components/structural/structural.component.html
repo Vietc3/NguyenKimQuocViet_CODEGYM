@@ -1,0 +1,58 @@
+<h1>ngIf</h1>
+<h1 *ngIf="isShow===false">{{userName}}</h1>
+<button type="button" class="btn-danger" (click)="toggle()">toggle</button>
+<div class="radio">
+  <label>
+    <input type="radio" name="rdCheck" (click)="onChange(true)">
+    Hợp Lệ
+  </label>
+  <label>
+    <input type="radio" name="rdCheck" (click)="onChange(false)">
+    Không hợp lệ
+  </label>
+  <!--  <h3 *ngIf="isCheck===false">Không hợp lệ</h3>-->
+  <!--  <h3 *ngIf="isCheck===true">hợp lệ</h3>-->
+  <h3 *ngIf="isCheck===false; else elseBlock">Không hợp lệ</h3>
+  <ng-template #elseBlock>
+    <h3 *ngIf="isCheck===true">hợp lệ</h3>
+  </ng-template>
+</div>
+<div class="form-group">
+  <label>Tuổi: {{age}}</label>
+  <input type="text" class="form-control" [(ngModel)]="age">
+  <ng-container *ngIf="age>=18; else elseBlock1"><h3>Đủ tuổi</h3></ng-container>
+  <ng-template #elseBlock1>
+    <h3>Còn non</h3>
+  </ng-template>
+</div>
+<hr>
+<hr>
+<h1>ngFor</h1>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let name of names">{{name}}</li>
+</ul>
+
+<ng-container *ngIf="product.length >0 ; else elseNoItem">
+  <table class="table table-bordered table-hover">
+    <thead>
+    <tr>
+      <th>STT</th>
+      <th>Name</th>
+      <th>Image</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let item of product; let i=index; let f=first;let l=last;let o=odd ; trackBy:myTrackingFunction"
+        [style.background-color]="f===true ? 'gray':''"
+        [style.background-color]="l===true ? 'red': (f===true ? 'gray':'')"
+    ><!--      [style.background-color]="o===true ? 'yellow':''"-->
+      <th>{{i + 1}}</th>
+      <th>{{item.name}}</th>
+      <th><img src="{{item.img}}" width="200px"></th>
+    </tr>
+    </tbody>
+  </table>
+</ng-container>
+<ng-template #elseNoItem><h3>Không có sản Phẩm</h3></ng-template>
+<button class="btn btn-danger" type="button" (click)="onLoadData()">Lấy Dữ Liệu</button>

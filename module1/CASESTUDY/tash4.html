@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrCus = [];
+    let delCus = ["Viet", "Dao", "Hong", "Hue", "Mai", "Tham", "Hang", "Linh", "Tu", "Trung"];
+    let choose = prompt('1. Add New Customer.' + '\n' + '2. Delete Customer.');
+    if (choose === "1") {
+        let fullNameAdd = "";
+        let fullNameAdd2 = "";
+        let numberCustomerAdd = prompt('Enter the number of customers you want to add:');
+        for (let i = 1; i <= Number(numberCustomerAdd); i++) {
+            let nameAdd = prompt('Enter Name Customer No' + i);
+            fullNameAdd += i + "." + nameAdd + "\n";
+            arrCus.push(nameAdd)
+
+        }
+        let fillTer = arrCus.sort();
+        for (let j = 0; j < fillTer.length; j++) {
+            fullNameAdd2 += j + 1 + "." + fillTer[j] + "\n";
+        }
+        alert(fullNameAdd);
+        alert(fullNameAdd2);
+    }
+    let fullNameDel = "";
+    let fullNameDe2 = "";
+    if (choose === "2") {
+        for (let i = 0; i < delCus.length; i++) {
+            fullNameDel += i + 1 + "." + delCus[i] + "\n";
+        }
+        alert(fullNameDel);
+        let numberCustomerDelete =parseInt( prompt('Choose customers you want to delete:'));
+        tam2=[];
+        for (let i = 0; i < delCus.length; i++) {
+            if(i===numberCustomerDelete-1){
+                continue;
+            }
+            tam2.push(delCus[i]);
+        }
+
+        // let tam2 = [];
+        // for (let i = 0; i < Number(numberCustomerDelete)-1 ; i++) {
+        //     tam2.push(delCus[i])
+        // }
+        // for (let i = Number(numberCustomerDelete); i < delCus.length; i++) {
+        //     tam2.push(delCus[i]);
+        // }
+        for(let i=0;i<tam2.length;i++)
+        {
+          fullNameDe2+=i+1+"."+tam2[i]+"\n";
+         }
+         alert(fullNameDe2)
+    }
+</script>
+</body>
+</html>

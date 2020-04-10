@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var NUMBER = '1234567890-=+[]{};:.,>"~`';
+    var NUMBER2 = '1234567890';
+    var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    var NUMBER3 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ;abcdefghijklmnopqrstuvwxyz-=+[]{};:.,>"~`';
+    var Kitu = '-=+[]{};":.,>';
+
+    let nameCustomer = prompt("Enter Name Customer:");
+    let checkName1 = 0;
+    while (checkName1 != nameCustomer.length) {
+        for (var i = 0; i <= (nameCustomer.length) - 1; i++) {
+            if (NUMBER.indexOf(nameCustomer.charAt(i)) !== -1) {
+                alert('Name Customer is invalid!!! Please try again');
+                nameCustomer = prompt("Enter Name Customer:");
+                checkName1 = 0;
+                break;
+            } else (checkName1 = checkName1 + 1)
+        }
+    }
+ 
+    let fixName = "";
+   nameCustomer=nameCustomer.toLocaleLowerCase();
+    for (var i = 0; i < nameCustomer.length; i++) {
+        if (nameCustomer.charAt(i) === " " && nameCustomer.charAt(i + 1) === " ") {
+            continue;
+        }
+        if (i === 0 || nameCustomer.charAt(i - 1) === " ") {
+            fixName += nameCustomer.charAt(i).toLocaleUpperCase();
+            continue;
+        }
+        fixName += nameCustomer.charAt(i)
+    }
+    nameCustomer = fixName;
+
+
+    let birthdayCustomer = prompt("Enter Birthday Customer(dd/MM/YYYY):");
+    let checkBirthday = 0;
+    while (checkBirthday != 1) {
+        if (birthdayCustomer.length === 10) {
+            if (birthdayCustomer.charAt(2) === "/" && birthdayCustomer.charAt(5) === "/" && NUMBER2.indexOf(birthdayCustomer.charAt(1)) != -1 && NUMBER2.indexOf(birthdayCustomer.charAt(0)) != -1 && NUMBER2.indexOf(birthdayCustomer.charAt(3)) != -1
+                && Number(birthdayCustomer.charAt(0) + birthdayCustomer.charAt(1)) <= 31 && (Number(birthdayCustomer.charAt(3) + birthdayCustomer.charAt(4))) <= 12 || (Number(birthdayCustomer.charAt(3) + birthdayCustomer.charAt(4)) < 12) && NUMBER2.indexOf(birthdayCustomer.charAt(4)) != -1 && NUMBER2.indexOf(birthdayCustomer.charAt(6)) != -1 && NUMBER2.indexOf(birthdayCustomer.charAt(7)) != -1 && NUMBER2.indexOf(birthdayCustomer.charAt(8)) != -1 && NUMBER2.indexOf(birthdayCustomer.charAt(9)) != -1) {
+                checkBirthday = 1;
+                break;
+            } else {
+                alert('Birthday Customer is invalid!!! Please try again');
+                birthdayCustomer = prompt("Enter Birthday Customer:");
+                checkBirthday = 0;
+            }
+        } else {
+            alert('Birthday Customer is invalid!!! Please try again');
+            birthdayCustomer = prompt("Enter Birthday Customer:");
+        }
+    }    ////kiểm tra số cmnd
+
+    let idCard = prompt("Enter ID Card Customer:");
+    let checkID = 0;
+    while (checkID !== idCard.length) {
+        if (idCard.length < 9 || idCard.length > 9) {
+            alert('ID Card Customer is invalid!!! Please try again');
+            idCard = prompt("Enter ID Card Customer:");
+        } else {
+            for (var j = 0;
+                 j <= (idCard.length) - 1;
+                 j++
+            ) {
+                if (NUMBER3.indexOf(idCard.charAt(j)) !== -1) {
+                    alert('ID Card Customer is invalid!!! Please try again');
+                    idCard = prompt("Enter ID Card Customer:");
+                    checkID = 0;
+                    break;
+                } else {
+                    checkID = checkID + 1;
+
+                }
+            }
+        }
+    }
+
+
+    //let birthdayCustomer = prompt("Enter Birthday Customer(dd/MM/YYYY):");
+
+    let emailCustomer = prompt("Enter Email Customer:");
+    let checkMail4 = 0;
+
+    while (checkMail4 != 1) {
+        let checkMail1 = emailCustomer.indexOf("@");
+        let checkMail2 = emailCustomer.indexOf(".");
+        let checkMail3 = emailCustomer.indexOf(" ");
+        if (checkMail1 !== -1 && checkMail1 !== 0 && checkMail2 !== -1 && checkMail2 >= checkMail1 + 1 && checkMail2 < emailCustomer.length - 1 && checkMail3 === -1) {
+            checkMail4 = 1;
+            break;
+        } else {
+            alert('Email Customer is invalid!!! Please try again');
+            emailCustomer = prompt("Enter Email Customer:");
+            checkMail4 = 0;
+        }
+    }
+
+
+    //kiem tra ma~ giam gia
+
+    //kiem tra nhập mã khách hàng
+    let numberOfAccompanying = prompt("Enter Number Of Accompanying:");
+    let checkOfAccompanying = 0;
+    while (checkOfAccompanying != numberOfAccompanying.length) {
+        if (numberOfAccompanying.length > 2) {
+            alert('Accompanying Customer is invalid!!! Please try again');
+            numberOfAccompanying = prompt("Enter Accompanying Customer:");
+
+        } else {
+            for (var i = 0; i <= (numberOfAccompanying.length) - 1; i++) {
+                if (UPPER.indexOf(numberOfAccompanying.charAt(i)) !== -1 || LOWER.indexOf(numberOfAccompanying.charAt(i)) !== -1) {
+                    alert('Accompanying Customer is invalid!!! Please try again');
+                    numberOfAccompanying = prompt("Enter Accompanying Customer:");
+                    checkOfAccompanying = 0;
+                    break;
+                } else (checkOfAccompanying = checkOfAccompanying + 1)
+            }
+        }
+    }
+
+    let renDays = prompt("Enter Ren Days:");
+    let checkRenDays = 0;
+    while (checkRenDays != renDays.length) {
+        for (var i = 0; i < (renDays.length) - 1; i++) {
+            if (NUMBER3.indexOf(renDays.charAt(i)) !== -1) {
+                alert('Rendays is invalid!!! Please try again');
+                renDays = prompt("Enter Rendays Customer:");
+                checkRenDays = 0;
+                break;
+            } else {
+                checkRenDays = checkRenDays + 1;
+                break;
+            }
+        }
+    }
+    // xét tên hợp lệ
+    alert("Information Of Customer:\n" +
+        "Name:" + nameCustomer +
+        "\nId Card:" + idCard +
+        "\nBirthDay:" + birthdayCustomer +
+        "\nEmail:" + emailCustomer +
+        "\nAccompanying:" + numberOfAccompanying +
+        "\nRen Days:" + renDays)
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<h2 style="margin-left: 40%">Add New Contract Detail</h2>
+
+<form class="w-50 mx-auto" [formGroup]="formAddNewContractDetail">
+
+  <div class="form-group">
+    <p id="name-input"> Input ID Contract</p>
+    <input type="text" class="form-control" formControlName="idContract">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewContractDetail.controls.idContract.errors?.required && formAddNewContractDetail.controls.idContract.touched ">
+      Input ID Contract, Please!</p>
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewContractDetail.controls.idContract.errors?.pattern && formAddNewContractDetail.controls.idContract.touched ">
+      Invalid ID Contract! Input ID Contract, Please</p>
+
+
+    <p id="name-Position" class="form-custom"> Input ID Service+</p>
+    <input type="text" class="form-control" formControlName="idServicePlus">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewContractDetail.controls.idServicePlus.errors?.required && formAddNewContractDetail.controls.idServicePlus.touched ">
+      Input ID Service+, Please!</p>
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewContractDetail.controls.idServicePlus.errors?.pattern && formAddNewContractDetail.controls.idServicePlus.touched ">
+      Invalid ID Service+! Input ID Service+, Please</p>
+
+
+
+
+    <p id="name-Numberphone"> Input Amount</p>
+    <input type="text" class="form-control" formControlName="amount">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewContractDetail.controls.amount.errors?.required && formAddNewContractDetail.controls.amount.touched ">
+      Input amount, Please!</p>
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewContractDetail.controls.amount.errors?.pattern && formAddNewContractDetail.controls.amount.touched ">
+      Invalid amount! Input amount, Please</p>
+
+
+
+
+  </div>
+</form>
+<div class="row d-flex justify-content-center">
+  <button [disabled]="formAddNewContractDetail.invalid" class="btn btn-success" type="submit" style="height: 36px"
+          (click)="addNewContractDetail()"
+  >Complete
+  </button>
+</div>
+
+
+
+

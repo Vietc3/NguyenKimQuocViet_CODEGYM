@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input oninput="binhPhuong(this.value)">
+<br/> Bình phương của số A là: <div id="ketqua"></div>
+<script>
+   function binhPhuong(a) {
+       a=parseFloat(a);
+       document.getElementById('ketqua').innerHTML=a*a;
+
+   }
+
+</script>
+</body>
+</html>

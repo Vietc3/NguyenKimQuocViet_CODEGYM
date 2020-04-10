@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div style="height: 600px; width: 800px; margin:auto; padding-left: 200px; padding-top: 100px ">
+    <input id="checkId1" type="checkbox" onclick="click1()"/> Good!
+    <br>
+    <input id="checkId2" type="checkbox" onclick="click2()"/> FAST!
+    <br>
+    <input id="checkId3" type="checkbox" onclick="click3()"/> CHEAP!
+</div>
+<script>
+    let good = document.getElementById('checkId1');
+    let fast = document.getElementById('checkId2');
+    let cheap = document.getElementById('checkId3');
+    function click1() {
+        if (good.checked == true) {
+            if (fast.checked == true) {
+                if (cheap.checked == true) {
+                    cheap.checked = false;
+                }
+            }
+        }
+    }
+    function click2() {
+        if (fast.checked == true) {
+            if (good.checked == true) {
+                if (cheap.checked == true) {
+                    good.checked = false;
+                }
+            }
+        }
+    }
+    function click3() {
+        if (cheap.checked == true) {
+            if (fast.checked == true) {
+                if (good.checked == true) {
+                    good.checked = false;
+                }
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

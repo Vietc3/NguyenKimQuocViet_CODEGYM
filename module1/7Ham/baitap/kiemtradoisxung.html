@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input oninput="kiemTraDoiXung(this.value)"/>
+<br/>
+<div id="ketqua"></div>
+
+<script>
+    function kiemTraDoiXung(a) {
+        let result = 0;
+        if (a.length % 2 === 0) {
+            for (let i = 0; i < a.length/2; i++) {
+                    if (a[i] === a[a.length-1-i]) {
+                        result++;
+                    } else {
+                        result=0;
+                    }
+            }
+            if (result === a.length / 2) {
+                document.getElementById('ketqua').innerText = 'TRUE'
+            }
+            else if (result ===0) {
+                document.getElementById('ketqua').innerText = 'FALSE'
+            }
+        }
+        else if (a.length % 2 !== 0) {
+            for (let i = 0; i < Math.round(a.length-1)/2; i++) {
+                if (a[i] === a[a.length-1-i]) {
+                    result++;
+                } else {
+                    result=0;
+                }
+            }
+            if (result === Math.round(a.length-1 )/ 2) {
+                document.getElementById('ketqua').innerText = 'TRUE'
+            }
+            if (result ===0) {
+                document.getElementById('ketqua').innerText = 'FALSE'
+            }
+        }}
+</script>
+</body>
+</html>

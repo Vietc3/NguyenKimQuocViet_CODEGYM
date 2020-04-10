@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .button {
+            background-color: Crimson;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .button2 {background-color: LightSalmon;}
+        .button3 {background-color: SeaGreen;}
+        .button4 {background-color: MidnightBlue;}
+        .button5 {background-color: Indigo;}
+    </style>
+    <style type="text/css">
+        table, th, td{
+            border-top:10px ;
+            border-bottom:10px ;
+        }
+        table{
+            border-collapse:collapse;
+            width:100%;
+        }
+        th, td{
+            text-align:left;
+            padding:10px;
+        }
+    </style>
+</head>
+
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>Currency</th>
+    </tr>
+<tr>
+    <th>        <input id="sotien1" type="number"/></th>
+    <th>
+        <select  id="donvi1" onchange="hamdonvi(this)">
+        <option value="USD">USD</option>
+        <option value="VND">VND</option>
+    </select>
+    </th>
+    <th>
+        <select  id="quocgia1" onchange="hamlaydulieu(this)">
+            <option value="My">Mỹ</option>
+            <option value="VN">VN</option>
+        </select>
+    </th>
+    <th><button class="button" onclick="myFunction()" id="ketqua"><span>kết quả</span></button></th>
+</tr>
+</table>
+<div id="chuyendoi">ketqua</div>
+    <script >
+        let sotien;
+        let viet;
+        let my;
+        let quocgia;
+        let donvi;
+        function myFunction() {
+            sotien =Number(document.getElementById("sotien1").value);
+            viet=sotien * 23000;
+            my=sotien / 23000;
+            quocgia=document.getElementById("quocgia1").value;
+            donvi=document.getElementById("donvi1").value;
+            chuyendoi=document.getElementById("chuyendoi");
+            if (quocgia === "VN") {
+               if (donvi === "USD") {
+                    chuyendoi.innerText=viet;}}
+            else if (quocgia === "My") {
+              if (donvi=== "VND") {
+                  chuyendoi.innerText= my;
+                }}
+            else{alert('chon lai')}
+        }
+
+    </script>
+</body>
+
+</html>

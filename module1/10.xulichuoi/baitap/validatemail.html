@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="mail" oninput="checkmail(this.value)">
+<div id="result"></div>
+<script>
+ var regex= /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/g;
+function checkmail(str)
+{
+    if(regex.test(str)){
+        document.getElementById('result').innerText="Mail đúng"
+    }
+    else {
+        document.getElementById('result').innerText="Mail sai"
+    }
+}
+</script>
+</body>
+</html>

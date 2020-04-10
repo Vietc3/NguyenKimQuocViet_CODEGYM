@@ -1,0 +1,85 @@
+<h2 style="margin-left: 40%">Edit New Service</h2>
+
+<form class="w-50 mx-auto" [formGroup]="formAddNewServiceEdit">
+
+  <div class="form-group">
+    <p id="name-input"> Input ID Name Service</p>
+    <input type="text" class="form-control" formControlName="nameService" [(ngModel)]="serviceEdit.nameService">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewServiceEdit.controls.nameService.errors?.required && formAddNewServiceEdit.controls.nameService.touched ">
+      Input ID Name Service, Please!</p>
+
+
+
+    <p id="name-Position" class="form-custom"> Input Area</p>
+    <input type="text" class="form-control" formControlName="area" [(ngModel)]="serviceEdit.area">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewServiceEdit.controls.area.errors?.required && formAddNewServiceEdit.controls.area.touched ">
+      Input area, Please!</p>
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewServiceEdit.controls.area.errors?.pattern && formAddNewServiceEdit.controls.area.touched ">
+      Invalid area! Input area, Please</p>
+
+
+
+
+    <p id="name-Numberphone"> Input Number Floors</p>
+    <input type="text" class="form-control" formControlName="numberFloors" [(ngModel)]="serviceEdit.numberFloors">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewServiceEdit.controls.numberFloors.errors?.required && formAddNewServiceEdit.controls.numberFloors.touched ">
+      Input Number Floors, Please!</p>
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewServiceEdit.controls.numberFloors.errors?.pattern && formAddNewServiceEdit.controls.numberFloors.touched ">
+      Invalid Number Floors! Input Number Floors, Please</p>
+
+
+    <p id="name-Numberphone1"> Input Max People</p>
+    <input type="text" class="form-control" formControlName="maxPeople" [(ngModel)]="serviceEdit.maxPeople">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewServiceEdit.controls.maxPeople.errors?.required && formAddNewServiceEdit.controls.maxPeople.touched ">
+      Input Max People, Please!</p>
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewServiceEdit.controls.maxPeople.errors?.pattern && formAddNewServiceEdit.controls.maxPeople.touched ">
+      Invalid Max People! Input Max People, Please</p>
+
+
+
+    <p id="name-Numberphone2"> Input Fee Rent</p>
+    <input type="text" class="form-control" formControlName="feeRent" [(ngModel)]="serviceEdit.feeRent">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewServiceEdit.controls.feeRent.errors?.required && formAddNewServiceEdit.controls.feeRent.touched ">
+      Input Fee Rent, Please!</p>
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewServiceEdit.controls.feeRent.errors?.pattern && formAddNewServiceEdit.controls.feeRent.touched ">
+      Invalid Fee Rent! Input Number Floors, Please</p>
+
+
+    <p id="name-Numberphone3"> Input ID Type Rent</p>
+    <input type="text" class="form-control" formControlName="idTypeRent" [(ngModel)]="serviceEdit.idTypeRent">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewServiceEdit.controls.idTypeRent.errors?.required && formAddNewServiceEdit.controls.idTypeRent.touched ">
+      Input Fee Rent, Please!</p>
+
+
+
+    <p id="name-Numberphone4"> Input Fee Rent</p>
+    <input type="text" class="form-control" formControlName="status" [(ngModel)]="serviceEdit.status">
+    <p class="alert alert-danger text-danger"
+       *ngIf="formAddNewServiceEdit.controls.status.errors?.required && formAddNewServiceEdit.controls.status.touched ">
+      Input Fee Rent, Please!</p>
+
+
+
+
+  </div>
+</form>
+<div class="row d-flex justify-content-center">
+  <button [disabled]="formAddNewServiceEdit.invalid" class="btn btn-success" type="submit" style="height: 36px"
+          (click)="onEditService()"
+  >Complete
+  </button>
+</div>
+
+
+
+

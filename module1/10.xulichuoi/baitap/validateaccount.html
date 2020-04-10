@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="mail" oninput="checkmail(this.value)">
+<div id="result"></div>
+<script>
+    var regex= /^[_a-z0-9]{6,}$/g;
+    function checkmail(str)
+    {
+        if(regex.test(str)){
+            document.getElementById('result').innerText="Account đúng"
+        }
+        else {
+            document.getElementById('result').innerText="Account sai"
+        }
+    }
+</script>
+</body>
+</html>

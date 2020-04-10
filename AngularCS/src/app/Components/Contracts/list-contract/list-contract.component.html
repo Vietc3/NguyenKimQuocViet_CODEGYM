@@ -1,0 +1,52 @@
+
+<div class="row">
+
+  <h2 id="danhSach1" style="margin-left: 30px">Contract List</h2>
+  <div class="d-flex" id="search">
+    <input class="form-control " type="text" placeholder="Search Contract " [(ngModel)]="searchTermContract" style="width:400px">
+    <button class="btn btn-success" type="submit" style="height: 36px" id="btnSearch" >Search</button>
+  </div>
+
+
+
+  <div class="row">
+    <button id="addNewEmployee" class="btn btn-success" [routerLink]="['/contract-list/add']">Add New Contract</button>
+    <table id="tableEmployee" class="table table-bordered table-hover">
+      <thead>
+      <tr style="text-align: center">
+        <th>ID</th>
+        <th>ID Employee</th>
+        <th>ID Customer</th>
+        <th>ID Service</th>
+        <th>Star Day</th>
+        <th>End Day</th>
+        <th>Deposit</th>
+        <th>Total</th>
+        <th width="180">Action</th>
+      </tr>
+      </thead>
+      <tbody style="text-align: center" >
+      <tr *ngFor="let contract of contracts |filter:searchTermContract |paginate: { itemsPerPage: 5, currentPage: pContract }">
+        <td>{{contract.id}}</td>
+        <td>{{contract.idEmployee}}</td>
+        <td>{{contract.idCustomer}}</td>
+        <td>{{contract.idService}}</td>
+        <td>{{contract.starDateContract|  date:'dd-MM-yyyy'}}</td>
+        <td>{{contract.endDateContract |  date:'dd-MM-yyyy'}}</td>
+        <td>{{contract.depositMoney}}</td>
+        <td>{{contract.totalMoney}}</td>
+        <td>
+          <div class="d-flex align-items-stretch px-0">
+            <button class="btn btn-warning" style="width: 70px" [routerLink]="['/contract-list',contract.id,'edit']">Edit</button>
+            <button class="btn btn-danger ml-3" style="width:70px" (click)="onDeleteContract(contract.id)">Delete</button>
+          </div>
+        </td>
+
+      </tbody>
+    </table>
+    <div id="page"> <pagination-controls (pageChange)="pContract = $event"></pagination-controls></div>
+
+  </div>
+
+</div>
+

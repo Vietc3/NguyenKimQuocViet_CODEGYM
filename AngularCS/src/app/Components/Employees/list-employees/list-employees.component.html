@@ -1,0 +1,52 @@
+<div class="row">
+  <h2 style="margin-left: 30px">Employee List</h2>
+  <div class="d-flex" id="search">
+    <input class="form-control " type="text" placeholder="Search Employee " [(ngModel)]="searchTerm" style="width:400px">
+
+    <button class="btn btn-success" type="submit" style="height: 36px" id="btnSearch" >Search</button>
+  </div>
+  <div class="row">
+    <button id="addNewEmployee" class="btn btn-success" [routerLink]="['/employee-list/add']">Add New Employee</button>
+    <table id="tableEmployee" class="table table-bordered table-hover">
+      <thead>
+      <tr style="text-align: center">
+        <th>ID</th>
+        <th>Full Name</th>
+        <th>Position</th>
+        <th>Level</th>
+        <th>Partitive</th>
+        <th>Birthday</th>
+        <th>IDCard</th>
+        <th>Salary</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Action</th>
+      </tr>
+      </thead>
+      <tbody style="text-align: center">
+      <tr *ngFor="let employee of employees |filter:searchTerm |paginate: { itemsPerPage: 5, currentPage: p }">
+        <td>{{employee.id}}</td>
+        <td>{{employee.name}}</td>
+        <td>{{employee.position}}</td>
+        <td>{{employee.lever}}</td>
+        <td>{{employee.partitive}}</td>
+        <td>{{employee.birthDay | date: 'dd/MM/yyyy'}}</td>
+        <td>{{employee.idCard}}</td>
+        <td>{{employee.salary}}</td>
+        <td>{{employee.phone}}</td>
+        <td>{{employee.email}}</td>
+        <td>{{employee.address}}</td>
+        <td style="width: 180px">
+          <div class="d-flex align-items-stretch px-0">
+          <button class="btn btn-warning" style="width: 70px" [routerLink]="['/employee-list',employee.id,'edit']">Edit</button>
+          <button class="btn btn-danger ml-3" style="width:70px" (click)="onDelete(employee.id)">Delete</button>
+          </div>
+        </td>
+      </tbody>
+    </table>
+    <div id="page"> <pagination-controls (pageChange)="p = $event"></pagination-controls></div>
+
+  </div>
+
+</div>

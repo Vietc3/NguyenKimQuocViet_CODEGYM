@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="txtValue">
+<input type="button" id="btnAdd" value="Thêm vào mảng" onclick="addArray();"></input>
+<input type="button" id="btnDisplay" value="Xuất ra màng hình" onclick="displayArray();"></input>
+<input type="button" value="tìm mảng tăng dài" onclick="timmangtangdainhat();"></input>
+<div id="result"></div>
+<script>
+    let x = 0;
+    let array = Array();
+    array = [2,4,5,6,7,9,29,30,31,0,0,0,2,2,4,5,6,7,8,9,9,10,2,3,4];
+    let check=0;
+    let array1=[];
+    let array2=[];
+    function timmangtangdainhat() {
+        for (let i=0;i<array.length;i++)
+        {
+           if(array[i]<array[i+1])
+           {
+               array1.push(array[i]);
+           }
+           else {
+               array1.push(array[i]);
+               array2.push(array1);
+               array1=[];
+        }
+        }
+        max=array2[0].length;
+        for(let i=0;i<array2.length;i++)
+        {
+            if(array2[i].length>=max)
+            {
+                max=array2[i].length;
+                check=i;
+            }
+
+        }
+       alert(array2[check])
+    }
+
+
+</script>
+</body>
+</html>
